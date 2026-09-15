@@ -500,6 +500,46 @@
           <stop offset="70%" stop-color="#E8BE5D" />
           <stop offset="100%" stop-color="#8F6218" />
         </linearGradient>
+
+        <!-- Glossy Mango Leaf Gradient -->
+        <linearGradient id="leafGrad" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#1b5e20" />
+          <stop offset="45%" stop-color="#2e7d32" />
+          <stop offset="85%" stop-color="#144d18" />
+          <stop offset="100%" stop-color="#0a2a0d" />
+        </linearGradient>
+
+        <!-- Reusable Realistic Mango Leaf Symbol -->
+        <g id="mango-leaf">
+          <!-- Leaf Body with natural curved tapered tip -->
+          <path d="M 0,0 C 7,-10 13,-24 0,-40 C -13,-24 -7,-10 0,0 Z" fill="url(#leafGrad)" />
+          <!-- Central Spine Vein -->
+          <path d="M 0,-2 C 0.8,-14 0.2,-28 0,-38" stroke="#81c784" stroke-width="0.8" opacity="0.65" stroke-linecap="round" />
+          <!-- Subtle Lateral Veins -->
+          <path d="M 0,-12 Q 4,-16 6,-18 M 0,-20 Q 5,-24 5,-27 M 0,-12 Q -4,-16 -6,-18 M 0,-20 Q -5,-24 -5,-27" stroke="#81c784" stroke-width="0.5" opacity="0.45" />
+        </g>
+
+        <!-- Reusable Realistic Multi-Petal Marigold (Genda Phool) -->
+        <g id="marigold-flower">
+          <!-- Dark Warm Base Shadow / Sepal Underlay -->
+          <circle cx="0" cy="0" r="11.5" fill="#BF360C" opacity="0.8" />
+          
+          <!-- Outer Tier: Ruffled Petal Silhouette -->
+          <path d="M 0,-11.5 C 3,-11.5 5.5,-10 7.5,-8 C 9.5,-6 11.5,-3 11.5,0 C 11.5,3 9.5,6 7.5,8 C 5.5,10 3,11.5 0,11.5 C -3,11.5 -5.5,10 -7.5,8 C -9.5,6 -11.5,3 -11.5,0 C -11.5,-3 -9.5,-6 -7.5,-8 C -5.5,-10 -3,-11.5 0,-11.5 Z" fill="#E65100" />
+          <circle cx="0" cy="0" r="10.8" fill="#F57C00" stroke="#BF360C" stroke-width="0.8" stroke-dasharray="2.4 1.2" />
+          
+          <!-- Mid-Outer Tier: Rich Saffron Petals -->
+          <circle cx="0" cy="0" r="9" fill="#FF9800" stroke="#E65100" stroke-width="0.9" stroke-dasharray="2 1.2" />
+          <circle cx="0" cy="0" r="7.4" fill="#FFA726" stroke="#EF6C00" stroke-width="0.8" stroke-dasharray="1.7 1" />
+          
+          <!-- Mid-Inner Tier: Golden Petal Ring -->
+          <circle cx="0" cy="0" r="5.6" fill="#FFB74D" stroke="#E65100" stroke-width="0.7" stroke-dasharray="1.4 0.9" />
+          <circle cx="0" cy="0" r="4" fill="#FFCC80" stroke="#F57C00" stroke-width="0.6" stroke-dasharray="1.1 0.7" />
+          
+          <!-- Center Crown / Pistil Cluster -->
+          <circle cx="0" cy="0" r="2.6" fill="#FFE082" />
+          <circle cx="0" cy="0" r="1.3" fill="#D84315" />
+        </g>
       </defs>
 
       <!-- Sacred Arched Temple Panel -->
@@ -511,61 +551,88 @@
       <path d="M 55,850 L 55,292 C 55,274 65,255 79,241 C 93,227 103,212 108,193 C 118,154 156,101 218,74 C 238,65 262,65 282,74 C 344,101 382,154 392,193 C 397,212 407,227 421,241 C 435,255 445,274 445,292 L 445,850"
             stroke="#DCA838" stroke-width="0.9" stroke-dasharray="3, 3" opacity="0.65" />
 
-      <!-- Fresh Marigold Garland & Mango Leaves along Arch -->
+      <!-- Fresh Marigold Garland & Realistic Mango Leaves -->
       <g id="marigold-garland" class="garland-pulse">
-        <!-- Deep Green Mango Leaves -->
-        <g fill="#1B4D24" opacity="0.95">
-          <path d="M 235,74 Q 248,55 250,50 Q 252,55 265,74 Q 250,76 235,74 Z" />
-          <path d="M 215,86 Q 225,68 230,62 Q 224,76 215,86 Z" />
-          <path d="M 285,86 Q 275,68 270,62 Q 276,76 285,86 Z" />
-          <path d="M 185,108 Q 170,90 172,82 Q 183,98 185,108 Z" />
-          <path d="M 315,108 Q 330,90 328,82 Q 317,98 315,108 Z" />
-          <path d="M 125,165 Q 106,155 102,148 Q 119,158 125,165 Z" />
-          <path d="M 375,165 Q 394,155 398,148 Q 381,158 375,165 Z" />
-          <path d="M 70,265 Q 52,280 50,290 Q 64,280 70,265 Z" />
-          <path d="M 430,265 Q 448,280 450,290 Q 436,280 430,265 Z" />
-          <path d="M 70,390 Q 52,405 50,415 Q 64,405 70,390 Z" />
-          <path d="M 430,390 Q 448,405 450,415 Q 436,405 430,390 Z" />
-        </g>
+        
+        <!-- Layer 1: Mango Leaves tucked behind flowers -->
+        <    <!-- Layer 1: Mango Leaves tucked directly behind marigold beads -->
+    <g id="mango-leaves-layer">
+      <!-- Apex Crown Leaves -->
+      <g transform="translate(250, 72)"><g transform="rotate(0) scale(0.65)"><use href="#mango-leaf"/></g></g>
+      <g transform="translate(240, 74)"><g transform="rotate(-28) scale(0.55)"><use href="#mango-leaf"/></g></g>
+      <g transform="translate(260, 74)"><g transform="rotate(28) scale(0.55)"><use href="#mango-leaf"/></g></g>
 
-        <!-- Fresh Marigold Blossoms (Vibrant Orange and Gold) -->
+      <!-- Arch Curvature Foliage (Left Side) -->
+      <g transform="translate(221, 85)"><g transform="rotate(-30) scale(0.58)"><use href="#mango-leaf"/></g></g>
+      <g transform="translate(202, 100)"><g transform="rotate(-45) scale(0.58)"><use href="#mango-leaf"/></g></g>
+      <g transform="translate(183, 118)"><g transform="rotate(-52) scale(0.58)"><use href="#mango-leaf"/></g></g>
+      <g transform="translate(165, 139)"><g transform="rotate(-60) scale(0.58)"><use href="#mango-leaf"/></g></g>
+      <g transform="translate(147, 162)"><g transform="rotate(-68) scale(0.58)"><use href="#mango-leaf"/></g></g>
+      <g transform="translate(128, 186)"><g transform="rotate(-78) scale(0.58)"><use href="#mango-leaf"/></g></g>
+      <g transform="translate(108, 210)"><g transform="rotate(-88) scale(0.58)"><use href="#mango-leaf"/></g></g>
+      <g transform="translate(88, 236)"><g transform="rotate(-96) scale(0.58)"><use href="#mango-leaf"/></g></g>
+
+      <!-- Arch Curvature Foliage (Right Side) -->
+      <g transform="translate(279, 85)"><g transform="rotate(30) scale(0.58)"><use href="#mango-leaf"/></g></g>
+      <g transform="translate(298, 100)"><g transform="rotate(45) scale(0.58)"><use href="#mango-leaf"/></g></g>
+      <g transform="translate(317, 118)"><g transform="rotate(52) scale(0.58)"><use href="#mango-leaf"/></g></g>
+      <g transform="translate(335, 139)"><g transform="rotate(60) scale(0.58)"><use href="#mango-leaf"/></g></g>
+      <g transform="translate(353, 162)"><g transform="rotate(68) scale(0.58)"><use href="#mango-leaf"/></g></g>
+      <g transform="translate(372, 186)"><g transform="rotate(78) scale(0.58)"><use href="#mango-leaf"/></g></g>
+      <g transform="translate(392, 210)"><g transform="rotate(88) scale(0.58)"><use href="#mango-leaf"/></g></g>
+      <g transform="translate(412, 236)"><g transform="rotate(96) scale(0.58)"><use href="#mango-leaf"/></g></g>
+
+      <!-- Vertical Hanging Drops (Pairs pointing outward) -->
+      <g transform="translate(68, 294)"><g transform="rotate(-110) scale(0.52)"><use href="#mango-leaf"/></g></g>
+      <g transform="translate(68, 374)"><g transform="rotate(-110) scale(0.52)"><use href="#mango-leaf"/></g></g>
+
+      <g transform="translate(432, 294)"><g transform="rotate(110) scale(0.52)"><use href="#mango-leaf"/></g></g>
+      <g transform="translate(432, 374)"><g transform="rotate(110) scale(0.52)"><use href="#mango-leaf"/></g></g>
+    </g>
+
+
+        <!-- Layer 2: Multi-Petal Marigold Blossoms -->
         <g id="marigold-flowers">
-          <circle cx="250" cy="73" r="10" fill="#FFA000" stroke="#FF6F00" stroke-width="0.8"/>
-          <circle cx="231" cy="80" r="9.5" fill="#FF6F00" stroke="#E65100" stroke-width="0.8"/>
-          <circle cx="269" cy="80" r="9.5" fill="#FF6F00" stroke="#E65100" stroke-width="0.8"/>
-          <circle cx="212" cy="92" r="9.5" fill="#FFB300" stroke="#FF8F00" stroke-width="0.8"/>
-          <circle cx="288" cy="92" r="9.5" fill="#FFB300" stroke="#FF8F00" stroke-width="0.8"/>
-          <circle cx="193" cy="108" r="9.5" fill="#FF6F00" stroke="#E65100" stroke-width="0.8"/>
-          <circle cx="307" cy="108" r="9.5" fill="#FF6F00" stroke="#E65100" stroke-width="0.8"/>
-          <circle cx="174" cy="128" r="9.5" fill="#FFA000" stroke="#FF6F00" stroke-width="0.8"/>
-          <circle cx="326" cy="128" r="9.5" fill="#FFA000" stroke="#FF6F00" stroke-width="0.8"/>
-          <circle cx="156" cy="150" r="9.5" fill="#FF6F00" stroke="#E65100" stroke-width="0.8"/>
-          <circle cx="344" cy="150" r="9.5" fill="#FF6F00" stroke="#E65100" stroke-width="0.8"/>
-          <circle cx="138" cy="174" r="9.5" fill="#FFB300" stroke="#FF8F00" stroke-width="0.8"/>
-          <circle cx="362" cy="174" r="9.5" fill="#FFB300" stroke="#FF8F00" stroke-width="0.8"/>
-          <circle cx="119" cy="198" r="9.5" fill="#FF6F00" stroke="#E65100" stroke-width="0.8"/>
-          <circle cx="381" cy="198" r="9.5" fill="#FF6F00" stroke="#E65100" stroke-width="0.8"/>
-          <circle cx="98" cy="223" r="9.5" fill="#FFA000" stroke="#FF6F00" stroke-width="0.8"/>
-          <circle cx="402" cy="223" r="9.5" fill="#FFA000" stroke="#FF6F00" stroke-width="0.8"/>
-          <circle cx="78" cy="250" r="9.5" fill="#FF6F00" stroke="#E65100" stroke-width="0.8"/>
-          <circle cx="422" cy="250" r="9.5" fill="#FF6F00" stroke="#E65100" stroke-width="0.8"/>
+          <!-- Arch Crest -->
+          <use href="#marigold-flower" x="250" y="73" transform="scale(1.08) translate(-18.5,-5.5)" />
+          
+          <use href="#marigold-flower" x="231" y="80" />
+          <use href="#marigold-flower" x="269" y="80" />
+          <use href="#marigold-flower" x="212" y="92" />
+          <use href="#marigold-flower" x="288" y="92" />
+          <use href="#marigold-flower" x="193" y="108" />
+          <use href="#marigold-flower" x="307" y="108" />
+          <use href="#marigold-flower" x="174" y="128" />
+          <use href="#marigold-flower" x="326" y="128" />
+          <use href="#marigold-flower" x="156" y="150" />
+          <use href="#marigold-flower" x="344" y="150" />
+          <use href="#marigold-flower" x="138" y="174" />
+          <use href="#marigold-flower" x="362" y="174" />
+          <use href="#marigold-flower" x="119" y="198" />
+          <use href="#marigold-flower" x="381" y="198" />
+          <use href="#marigold-flower" x="98"  y="223" />
+          <use href="#marigold-flower" x="402" y="223" />
+          <use href="#marigold-flower" x="78"  y="250" />
+          <use href="#marigold-flower" x="422" y="250" />
 
-          <!-- Vertical Columns of Marigolds -->
-          <circle cx="68" cy="285" r="9" fill="#FFB300"/>
-          <circle cx="68" cy="303" r="9" fill="#FF6F00"/>
-          <circle cx="68" cy="321" r="9" fill="#FFB300"/>
-          <circle cx="68" cy="365" r="9" fill="#FFB300"/>
-          <circle cx="68" cy="383" r="9" fill="#FF6F00"/>
-          <circle cx="68" cy="401" r="9" fill="#FFB300"/>
+          <!-- Left Hanging Column -->
+          <use href="#marigold-flower" x="68" y="285" />
+          <use href="#marigold-flower" x="68" y="303" />
+          <use href="#marigold-flower" x="68" y="321" />
+          <use href="#marigold-flower" x="68" y="365" />
+          <use href="#marigold-flower" x="68" y="383" />
+          <use href="#marigold-flower" x="68" y="401" />
 
-          <circle cx="432" cy="285" r="9" fill="#FFB300"/>
-          <circle cx="432" cy="303" r="9" fill="#FF6F00"/>
-          <circle cx="432" cy="321" r="9" fill="#FFB300"/>
-          <circle cx="432" cy="365" r="9" fill="#FFB300"/>
-          <circle cx="432" cy="383" r="9" fill="#FF6F00"/>
-          <circle cx="432" cy="401" r="9" fill="#FFB300"/>
+          <!-- Right Hanging Column -->
+          <use href="#marigold-flower" x="432" y="285" />
+          <use href="#marigold-flower" x="432" y="303" />
+          <use href="#marigold-flower" x="432" y="321" />
+          <use href="#marigold-flower" x="432" y="365" />
+          <use href="#marigold-flower" x="432" y="383" />
+          <use href="#marigold-flower" x="432" y="401" />
         </g>
       </g>
+
 
       <!-- Left Mechanical Gear (Rotates Counter-Clockwise) -->
       <g id="gear-bottom-left" class="gear-spin-left" opacity="0.38" stroke="#C9982F" stroke-width="1.4" fill="none">
