@@ -1,1051 +1,1219 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>Vishwakarma Puja Invitation | Karimganj College</title>
-  
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  
-  <!-- Google Fonts: Marcellus, Cinzel, Rozha One, Poppins -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Marcellus&family=Poppins:wght@300;400;500;600&family=Rozha+One&display=swap" rel="stylesheet">
-  
-  <style>
-    * {
-      -webkit-tap-highlight-color: transparent;
-      box-sizing: border-box;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Vishwakarma Puja Invitation | Karimganj College</title>
 
-    body {
-      background: radial-gradient(circle at center, #230204 0%, #130002 65%, #080001 100%);
-      font-family: 'Poppins', sans-serif;
-      min-height: 100vh;
-      overflow-x: hidden;
-    }
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
 
-    .font-cinzel { font-family: 'Cinzel', serif; }
-    .font-marcellus { font-family: 'Marcellus', serif; }
-    .font-sanskrit { font-family: 'Rozha One', 'Marcellus', serif; }
+    <!-- Google Fonts: Marcellus, Cinzel, Rozha One, Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Marcellus&family=Poppins:wght@300;400;500;600&family=Rozha+One&display=swap" rel="stylesheet">
 
-    /* Celestial Rotating Ring Behind Lord Vishwakarma's Crown */
-    @keyframes spinHaloRingClockwise {
-      from { transform: rotate(0deg); }
-      to { transform: rotate(360deg); }
-    }
-    @keyframes spinHaloRingCounter {
-      from { transform: rotate(0deg); }
-      to { transform: rotate(-360deg); }
-    }
+    <style>
+        * {
+            -webkit-tap-highlight-color: transparent;
+            box-sizing: border-box;
+        }
 
-    .halo-outer-spin {
-      animation: spinHaloRingClockwise 28s linear infinite;
-      transform-origin: center center;
-    }
-    .halo-inner-spin {
-      animation: spinHaloRingCounter 38s linear infinite;
-      transform-origin: center center;
-    }
+        body {
+            background: radial-gradient(circle at center, #230204 0%, #130002 65%, #080001 100%);
+            font-family: 'Poppins', sans-serif;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
 
-    /* Synchronized Technical Gears (Opposing Directions) */
-    @keyframes gearLeftCounter {
-      from { transform: rotate(0deg); }
-      to { transform: rotate(-360deg); }
-    }
-    @keyframes gearRightClock {
-      from { transform: rotate(0deg); }
-      to { transform: rotate(360deg); }
-    }
+        .font-cinzel {
+            font-family: 'Cinzel', serif;
+        }
+        .font-marcellus {
+            font-family: 'Marcellus', serif;
+        }
+        .font-sanskrit {
+            font-family: 'Rozha One', 'Marcellus', serif;
+        }
 
-    .gear-spin-left {
-      transform-origin: 10px 870px;
-      animation: gearLeftCounter 25s linear infinite;
-    }
-    .gear-spin-right {
-      transform-origin: 490px 870px;
-      animation: gearRightClock 25s linear infinite;
-    }
+        /* Celestial Rotating Ring Behind Lord Vishwakarma's Crown */
+        @keyframes spinHaloRingClockwise {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+        @keyframes spinHaloRingCounter {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(-360deg);
+            }
+        }
 
-    /* Natural Diya Flame Flicker & Warm Glow */
-    @keyframes realisticFlameFlicker {
-      0%, 100% {
-        transform: scale(1, 1) skewX(0deg);
-        filter: drop-shadow(0 0 6px rgba(255, 191, 0, 0.95)) drop-shadow(0 -3px 12px rgba(230, 81, 0, 0.8));
-      }
-      20% {
-        transform: scale(1.08, 0.92) skewX(-2.2deg);
-        filter: drop-shadow(0 0 9px rgba(255, 214, 64, 1)) drop-shadow(0 -5px 15px rgba(245, 124, 0, 0.9));
-      }
-      45% {
-        transform: scale(0.94, 1.06) skewX(2.5deg);
-        filter: drop-shadow(0 0 5px rgba(255, 160, 0, 0.85)) drop-shadow(0 -2px 9px rgba(216, 67, 21, 0.7));
-      }
-      70% {
-        transform: scale(1.04, 0.96) skewX(-1.5deg);
-        filter: drop-shadow(0 0 8px rgba(255, 204, 0, 0.95)) drop-shadow(0 -4px 13px rgba(239, 108, 0, 0.85));
-      }
-    }
+        .halo-outer-spin {
+            animation: spinHaloRingClockwise 28s linear infinite;
+            transform-origin: center center;
+        }
+        .halo-inner-spin {
+            animation: spinHaloRingCounter 38s linear infinite;
+            transform-origin: center center;
+        }
 
-    .flame-anim-1 { transform-origin: 50% 95%; animation: realisticFlameFlicker 1.8s ease-in-out infinite; }
-    .flame-anim-2 { transform-origin: 50% 95%; animation: realisticFlameFlicker 2.1s ease-in-out infinite 0.3s; }
-    .flame-anim-3 { transform-origin: 50% 95%; animation: realisticFlameFlicker 1.9s ease-in-out infinite 0.7s; }
-    .flame-anim-4 { transform-origin: 50% 95%; animation: realisticFlameFlicker 2.3s ease-in-out infinite 0.2s; }
+        /* Synchronized Technical Gears (Opposing Directions) */
+        @keyframes gearLeftCounter {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(-360deg);
+            }
+        }
+        @keyframes gearRightClock {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
 
-    /* Hanging Diya Gentle Swaying */
-    @keyframes lampSwayLeft {
-      0%, 100% { transform: rotate(-0.9deg); }
-      50% { transform: rotate(0.9deg); }
-    }
-    @keyframes lampSwayRight {
-      0%, 100% { transform: rotate(0.9deg); }
-      50% { transform: rotate(-0.9deg); }
-    }
+        .gear-spin-left {
+            transform-origin: 10px 870px;
+            animation: gearLeftCounter 25s linear infinite;
+        }
+        .gear-spin-right {
+            transform-origin: 490px 870px;
+            animation: gearRightClock 25s linear infinite;
+        }
 
-    .sway-left {
-      transform-origin: top center;
-      animation: lampSwayLeft 5.2s ease-in-out infinite;
-    }
-    .sway-right {
-      transform-origin: top center;
-      animation: lampSwayRight 5.8s ease-in-out infinite;
-    }
+        /* Natural Diya Flame Flicker & Warm Glow */
+        @keyframes realisticFlameFlicker {
+            0%, 100% {
+                transform: scale(1, 1) skewX(0deg);
+                filter: drop-shadow(0 0 6px rgba(255, 191, 0, 0.95)) drop-shadow(0 -3px 12px rgba(230, 81, 0, 0.8));
+            }
+            20% {
+                transform: scale(1.08, 0.92) skewX(-2.2deg);
+                filter: drop-shadow(0 0 9px rgba(255, 214, 64, 1)) drop-shadow(0 -5px 15px rgba(245, 124, 0, 0.9));
+            }
+            45% {
+                transform: scale(0.94, 1.06) skewX(2.5deg);
+                filter: drop-shadow(0 0 5px rgba(255, 160, 0, 0.85)) drop-shadow(0 -2px 9px rgba(216, 67, 21, 0.7));
+            }
+            70% {
+                transform: scale(1.04, 0.96) skewX(-1.5deg);
+                filter: drop-shadow(0 0 8px rgba(255, 204, 0, 0.95)) drop-shadow(0 -4px 13px rgba(239, 108, 0, 0.85));
+            }
+        }
 
-    /* Soft Breathing Glow on Garlands */
-    @keyframes garlandSoftPulse {
-      0%, 100% { opacity: 0.95; }
-      50% { opacity: 1; }
-    }
-    .garland-pulse {
-      animation: garlandSoftPulse 4s ease-in-out infinite;
-    }
-  
-    /* ================= V2 MOBILE UX ================= */
-    .card-shell {
-      isolation: isolate;
-    }
+        .flame-anim-1 {
+            transform-origin: 50% 95%;
+            animation: realisticFlameFlicker 1.8s ease-in-out infinite;
+        }
+        .flame-anim-2 {
+            transform-origin: 50% 95%;
+            animation: realisticFlameFlicker 2.1s ease-in-out infinite 0.3s;
+        }
+        .flame-anim-3 {
+            transform-origin: 50% 95%;
+            animation: realisticFlameFlicker 1.9s ease-in-out infinite 0.7s;
+        }
+        .flame-anim-4 {
+            transform-origin: 50% 95%;
+            animation: realisticFlameFlicker 2.3s ease-in-out infinite 0.2s;
+        }
 
-    .hero-disc {
-      width: 130px;
-      height: 130px;
-      border-radius: 999px;
-      background:
-        radial-gradient(circle at 50% 45%, rgba(255,248,220,.98) 0 48%,
-        rgba(244,219,164,.96) 49% 62%,
-        rgba(184,134,45,.22) 63% 65%,
-        transparent 66%),
-        radial-gradient(circle, rgba(255,206,79,.18), transparent 67%);
-      box-shadow:
-        0 0 0 1px rgba(189,139,48,.65),
-        0 0 0 6px rgba(255,237,181,.10),
-        0 0 28px rgba(225,173,60,.18);
-      position: relative;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-    }
+        /* Hanging Diya Gentle Swaying */
+        @keyframes lampSwayLeft {
+            0%, 100% {
+                transform: rotate(-0.9deg);
+            }
+            50% {
+                transform: rotate(0.9deg);
+            }
+        }
+        @keyframes lampSwayRight {
+            0%, 100% {
+                transform: rotate(0.9deg);
+            }
+            50% {
+                transform: rotate(-0.9deg);
+            }
+        }
 
-    .hero-disc::before {
-      content:"";
-      position:absolute;
-      inset:9px;
-      border:1px dashed rgba(174,123,32,.65);
-      border-radius:50%;
-    }
+        .sway-left {
+            transform-origin: top center;
+            animation: lampSwayLeft 5.2s ease-in-out infinite;
+        }
+        .sway-right {
+            transform-origin: top center;
+            animation: lampSwayRight 5.8s ease-in-out infinite;
+        }
 
-    .hero-disc::after {
-      content:"";
-      position:absolute;
-      inset:-8px;
-      border:1px solid rgba(220,168,56,.28);
-      border-radius:50%;
-      pointer-events:none;
-    }
+        /* Soft Breathing Glow on Garlands */
+        @keyframes garlandSoftPulse {
+            0%, 100% {
+                opacity: 0.95;
+            }
+            50% {
+                opacity: 1;
+            }
+        }
+        .garland-pulse {
+            animation: garlandSoftPulse 4s ease-in-out infinite;
+        }
 
-    .artwork-canvas {
-      width: 275px;
-      height: 405px;
-      max-width: 78%;
-      max-height: 100%;
-      position: relative;
-      z-index: 3;
-      filter: drop-shadow(0 5px 9px rgba(78,45,8,.22));
-    }
+        /* ================= V2 MOBILE UX ================= */
+        .card-shell {
+            isolation: isolate;
+        }
 
-    .hero-light {
-      position:absolute;
-      width:235px;
-      height:235px;
-      border-radius:50%;
-      background:radial-gradient(circle, rgba(255,215,110,.17), rgba(255,215,110,0) 68%);
-      pointer-events:none;
-      z-index:1;
-      animation: heroBreath 4s ease-in-out infinite;
-    }
+        .hero-disc {
+            width: 130px;
+            height: 130px;
+            border-radius: 999px;
+            background:
+            radial-gradient(circle at 50% 45%, rgba(255,248,220,.98) 0 48%,
+            rgba(244,219,164,.96) 49% 62%,
+            rgba(184,134,45,.22) 63% 65%,
+            transparent 66%),
+            radial-gradient(circle, rgba(255,206,79,.18), transparent 67%);
+            box-shadow:
+            0 0 0 1px rgba(189,139,48,.65),
+            0 0 0 6px rgba(255,237,181,.10),
+            0 0 28px rgba(225,173,60,.18);
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
 
-    @keyframes heroBreath {
-      0%,100% { transform:scale(.96); opacity:.65; }
-      50% { transform:scale(1.04); opacity:1; }
-    }
+        .hero-disc::before {
+            content: "";
+            position: absolute;
+            inset: 9px;
+            border: 1px dashed rgba(174,123,32,.65);
+            border-radius: 50%;
+        }
 
-    .details-panel {
-      position:absolute;
-      left:12px;
-      right:12px;
-      bottom:48px;
-      top:50%;
-      z-index:20;
-      display:flex;
-      flex-direction:column;
-      align-items:center;
-      text-align:center;
-      padding:5px 18px 8px;
-      overflow:hidden;
-    }
+        .hero-disc::after {
+            content: "";
+            position: absolute;
+            inset: -8px;
+            border: 1px solid rgba(220,168,56,.28);
+            border-radius: 50%;
+            pointer-events: none;
+        }
 
-    .event-card {
-      width:100%;
-      max-width:315px;
-      padding:9px 12px;
-      border:1px solid rgba(166,119,42,.46);
-      border-radius:16px;
-      background:rgba(255,246,216,.78);
-      box-shadow:0 5px 16px rgba(88,44,8,.08);
-      backdrop-filter:blur(5px);
-    }
+        .artwork-canvas {
+            width: 275px;
+            height: 405px;
+            max-width: 78%;
+            max-height: 100%;
+            position: relative;
+            z-index: 3;
+            filter: drop-shadow(0 5px 9px rgba(78,45,8,.22));
+        }
 
-    .event-row {
-      display:flex;
-      align-items:center;
-      gap:9px;
-      padding:5px 0;
-      color:#4a1115;
-      font-size:11px;
-      font-weight:600;
-    }
+        .hero-light {
+            position: absolute;
+            width: 235px;
+            height: 235px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(255,215,110,.17), rgba(255,215,110,0) 68%);
+            pointer-events: none;
+            z-index: 1;
+            animation: heroBreath 4s ease-in-out infinite;
+        }
 
-    .event-row + .event-row {
-      border-top:1px solid rgba(166,119,42,.20);
-    }
+        @keyframes heroBreath {
+            0%,100% {
+                transform: scale(.96);
+                opacity: .65;
+            }
+            50% {
+                transform: scale(1.04);
+                opacity: 1;
+            }
+        }
 
-    .event-icon {
-      width:25px;
-      height:25px;
-      flex:0 0 25px;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      border-radius:50%;
-      background:rgba(187,135,37,.14);
-      border:1px solid rgba(166,119,42,.30);
-    }
+        .details-panel {
+            position: absolute;
+            left: 12px;
+            right: 12px;
+            bottom: 48px;
+            top: 50%;
+            z-index: 20;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 5px 18px 8px;
+            overflow: hidden;
+        }
 
-    .countdown-box {
-      margin:4px 0;
-      padding:5px 11px 6px;
-      border-radius:14px;
-      border:1px solid rgba(176,126,38,.38);
-      background:linear-gradient(180deg, rgba(255,248,225,.62), rgba(245,224,180,.44));
-      min-width:190px;
-    }
+        .event-card {
+            width: 100%;
+            max-width: 315px;
+            padding: 9px 12px;
+            border: 1px solid rgba(166,119,42,.46);
+            border-radius: 16px;
+            background: rgba(255,246,216,.78);
+            box-shadow: 0 5px 16px rgba(88,44,8,.08);
+            backdrop-filter: blur(5px);
+        }
 
-    .countdown-label {
-      font-size:8px;
-      letter-spacing:.18em;
-      color:#81531e;
-      font-weight:700;
-      text-transform:uppercase;
-    }
+        .event-row {
+            display: flex;
+            align-items: center;
+            gap: 9px;
+            padding: 5px 0;
+            color: #4a1115;
+            font-size: 11px;
+            font-weight: 600;
+        }
 
-    .countdown-value {
-      font-family:'Cinzel',serif;
-      font-size:16px;
-      line-height:1.1;
-      letter-spacing:.07em;
-      color:#5a1016;
-      font-weight:800;
-    }
+        .event-row + .event-row {
+            border-top: 1px solid rgba(166,119,42,.20);
+        }
 
-    .countdown-units {
-      font-size:7px;
-      letter-spacing:.11em;
-      color:#8a622b;
-      margin-top:2px;
-    }
+        .event-icon {
+            width: 25px;
+            height: 25px;
+            flex: 0 0 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: rgba(187,135,37,.14);
+            border: 1px solid rgba(166,119,42,.30);
+        }
 
-    .action-dock {
-      position:absolute;
-      left:18px;
-      right:18px;
-      bottom:8px;
-      z-index:40;
-      display:grid;
-      grid-template-columns:1fr 1fr 1fr;
-      gap:6px;
-      padding:5px;
-      border-radius:17px;
-      background:rgba(52,5,9,.88);
-      border:1px solid rgba(194,145,51,.45);
-      box-shadow:0 8px 22px rgba(0,0,0,.24);
-      backdrop-filter:blur(8px);
-    }
+        .countdown-box {
+            margin: 4px 0;
+            padding: 5px 11px 6px;
+            border-radius: 14px;
+            border: 1px solid rgba(176,126,38,.38);
+            background: linear-gradient(180deg, rgba(255,248,225,.62), rgba(245,224,180,.44));
+            min-width: 190px;
+        }
 
-    .action-btn {
-      min-height:30px;
-      border-radius:12px;
-      border:1px solid rgba(196,146,54,.30);
-      background:rgba(112,54,22,.25);
-      color:#f7df9e;
-      font-size:9px;
-      font-weight:700;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      gap:4px;
-      transition:.2s ease;
-    }
+        .countdown-label {
+            font-size: 8px;
+            letter-spacing: .18em;
+            color: #81531e;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
 
-    .action-btn:active {
-      transform:scale(.96);
-      background:rgba(164,104,31,.35);
-    }
+        .countdown-value {
+            font-family: 'Cinzel',serif;
+            font-size: 16px;
+            line-height: 1.1;
+            letter-spacing: .07em;
+            color: #5a1016;
+            font-weight: 800;
+        }
 
-    .tech-accent {
-      color:#9a6a2a;
-    }
+        .countdown-units {
+            font-size: 7px;
+            letter-spacing: .11em;
+            color: #8a622b;
+            margin-top: 2px;
+        }
 
-    @media (max-width:370px) {
-      .hero-disc { width:155px; height:155px; }
-      .artwork-canvas { width:255px; height:385px; }
-      .details-panel { padding-left:10px; padding-right:10px; }
-      .event-card { max-width:290px; }
-      .countdown-value { font-size:14px; }
-    }
+        .action-dock {
+            position: absolute;
+            left: 18px;
+            right: 18px;
+            bottom: 8px;
+            z-index: 40;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 6px;
+            padding: 5px;
+            border-radius: 17px;
+            background: rgba(52,5,9,.88);
+            border: 1px solid rgba(194,145,51,.45);
+            box-shadow: 0 8px 22px rgba(0,0,0,.24);
+            backdrop-filter: blur(8px);
+        }
 
-    @media (prefers-reduced-motion: reduce) {
-      *, *::before, *::after {
-        animation-duration:.01ms !important;
-        animation-iteration-count:1 !important;
-        scroll-behavior:auto !important;
-      }
-    }
+        .action-btn {
+            min-height: 30px;
+            border-radius: 12px;
+            border: 1px solid rgba(196,146,54,.30);
+            background: rgba(112,54,22,.25);
+            color: #f7df9e;
+            font-size: 9px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 4px;
+            transition: .2s ease;
+        }
 
-  </style>
+        .action-btn:active {
+            transform: scale(.96);
+            background: rgba(164,104,31,.35);
+        }
+
+        .tech-accent {
+            color: #9a6a2a;
+        }
+
+        @media (max-width:370px) {
+            .hero-disc {
+                width: 155px;
+                height: 155px;
+            }
+            .artwork-canvas {
+                width: 255px;
+                height: 385px;
+            }
+            .details-panel {
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+            .event-card {
+                max-width: 290px;
+            }
+            .countdown-value {
+                font-size: 14px;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: .01ms !important;
+                animation-iteration-count: 1 !important;
+                scroll-behavior: auto !important;
+            }
+        }
+
+    </style>
 </head>
 <body class="flex flex-col items-center justify-start min-h-screen p-2 sm:p-5 text-neutral-100">
 
-  <header class="w-full max-w-[420px] flex items-center justify-between py-2 px-3 mb-2 bg-[#2d0508]/85 backdrop-blur border border-[#6b1e22]/50 rounded-xl shadow-lg">
-    <div class="flex items-center space-x-2 min-w-0">
-      <span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-amber-400/15 border border-amber-500/40 text-amber-300 text-xs">ॐ</span>
-      <div class="min-w-0">
-        <div class="text-[10px] font-marcellus tracking-[.16em] text-amber-200 uppercase font-semibold truncate">Puja Invitation</div>
-        <div class="text-[7px] text-amber-500/70 tracking-wider uppercase">Karimganj College • BCA & BCS</div>
-      </div>
-    </div>
-    <div class="flex items-center gap-1.5">
-      <button id="audioToggleBtn" onclick="toggleDivineSound()" class="flex items-center gap-1 px-2.5 py-1.5 text-[10px] rounded-lg bg-[#420a0e] hover:bg-[#571016] border border-[#a26829]/60 text-amber-200 transition-all active:scale-95 shadow" title="Play divine chimes">
-        <svg id="audioIcon" class="w-3.5 h-3.5 text-amber-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
-        </svg>
-        <span id="audioText" class="font-medium">Play</span>
-      </button>
-      <button onclick="shareInvitation()" class="p-2 rounded-lg bg-[#420a0e] hover:bg-[#571016] border border-[#a26829]/60 text-amber-200 transition-all active:scale-95 shadow" title="Share invitation" aria-label="Share invitation">
-        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 16V4m0 0L7.5 8.5M12 4l4.5 4.5M5 13v5a2 2 0 002 2h10a2 2 0 002-2v-5"/>
-        </svg>
-      </button>
-    </div>
-  </header>
-
-  <main id="cardContainer" class="card-shell relative w-full max-w-[420px] aspect-[9/16] rounded-2xl overflow-hidden shadow-[0_22px_55px_rgba(0,0,0,0.85)] border border-[#85501a] select-none bg-[#38050a]">
-    
-    <!-- Background Gradient: Deep Maroon Base -->
-    <div class="absolute inset-0 bg-gradient-to-b from-[#40060b] via-[#330408] to-[#220204]"></div>
-    
-    <!-- Delicate Outer Gold Double Borders -->
-    <div class="absolute inset-2.5 rounded-xl border border-[#b8860b]/40 pointer-events-none z-10"></div>
-    <div class="absolute inset-3 rounded-[10px] border border-[#d4af37]/20 pointer-events-none z-10"></div>
-
-    <div class="absolute top-0 left-0 w-full pointer-events-none z-30 flex justify-between px-3 sm:px-4">
-      
-      <!-- Left Pair of Hanging Brass Lamps -->
-      <div class="flex gap-3.5 sm:gap-5">
-        <!-- Far Left Diya (Higher) -->
-        <div class="sway-left flex flex-col items-center">
-          <div class="w-[1.5px] h-11 sm:h-13 bg-gradient-to-b from-[#e5b245] via-[#ffd54f] to-[#996515] shadow-sm"></div>
-          <div class="w-1.5 h-1.5 rounded-full bg-[#f3c14b] border border-[#7a4c07] -mt-0.5"></div>
-          
-          <div class="relative -mt-0.5 flex flex-col items-center">
-            <!-- Flickering Teardrop Flame -->
-            <div class="flame-anim-1 relative w-3.5 h-5 -mb-1 z-20">
-              <svg viewBox="0 0 16 28" class="w-full h-full overflow-visible">
-                <defs>
-                  <radialGradient id="flameGradLeft1" cx="50%" cy="75%" r="65%">
-                    <stop offset="0%" stop-color="#ffffff" />
-                    <stop offset="30%" stop-color="#fff59d" />
-                    <stop offset="65%" stop-color="#ff9800" />
-                    <stop offset="100%" stop-color="#d84315" />
-                  </radialGradient>
-                </defs>
-                <path d="M 8,1 C 12,9 15,17 14,22 C 13,26 10,27 8,27 C 6,27 3,26 2,22 C 1,17 4,9 8,1 Z" fill="url(#flameGradLeft1)" />
-                <ellipse cx="8" cy="22" rx="2.5" ry="3.5" fill="#ffffff" opacity="0.95" />
-              </svg>
+    <header class="w-full max-w-[420px] flex items-center justify-between py-2 px-3 mb-2 bg-[#2d0508]/85 backdrop-blur border border-[#6b1e22]/50 rounded-xl shadow-lg">
+        <div class="flex items-center space-x-2 min-w-0">
+            <span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-amber-400/15 border border-amber-500/40 text-amber-300 text-xs">ॐ</span>
+            <div class="min-w-0">
+                <div class="text-[10px] font-marcellus tracking-[.16em] text-amber-200 uppercase font-semibold truncate">
+                    Puja Invitation
+                </div>
+                <div class="text-[7px] text-amber-500/70 tracking-wider uppercase">
+                    Karimganj College • BCA & BCS
+                </div>
             </div>
-            
-            <!-- Metallic Brass Diya Bowl -->
-            <svg width="28" height="18" viewBox="0 0 34 20" fill="none">
-              <defs>
-                <linearGradient id="brassGrad1" x1="0" y1="0" x2="34" y2="20" gradientUnits="userSpaceOnUse">
-                  <stop stop-color="#FFF2A1"/>
-                  <stop offset="0.35" stop-color="#E5AD35"/>
-                  <stop offset="0.75" stop-color="#B3781A"/>
-                  <stop offset="1" stop-color="#553303"/>
+        </div>
+        <div class="flex items-center gap-1.5">
+            <button id="audioToggleBtn" onclick="toggleDivineSound()" class="flex items-center gap-1 px-2.5 py-1.5 text-[10px] rounded-lg bg-[#420a0e] hover:bg-[#571016] border border-[#a26829]/60 text-amber-200 transition-all active:scale-95 shadow" title="Play divine chimes">
+                <svg id="audioIcon" class="w-3.5 h-3.5 text-amber-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
+                </svg>
+                <span id="audioText" class="font-medium">Play</span>
+            </button>
+            <button onclick="shareInvitation()" class="p-2 rounded-lg bg-[#420a0e] hover:bg-[#571016] border border-[#a26829]/60 text-amber-200 transition-all active:scale-95 shadow" title="Share invitation" aria-label="Share invitation">
+                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 16V4m0 0L7.5 8.5M12 4l4.5 4.5M5 13v5a2 2 0 002 2h10a2 2 0 002-2v-5" />
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <main id="cardContainer" class="card-shell relative w-full max-w-[420px] aspect-[9/16] rounded-2xl overflow-hidden shadow-[0_22px_55px_rgba(0,0,0,0.85)] border border-[#85501a] select-none bg-[#38050a]">
+
+        <!-- Background Gradient: Deep Maroon Base -->
+        <div class="absolute inset-0 bg-gradient-to-b from-[#40060b] via-[#330408] to-[#220204]"></div>
+
+        <!-- Delicate Outer Gold Double Borders -->
+        <div class="absolute inset-2.5 rounded-xl border border-[#b8860b]/40 pointer-events-none z-10"></div>
+        <div class="absolute inset-3 rounded-[10px] border border-[#d4af37]/20 pointer-events-none z-10"></div>
+
+        <div class="absolute top-0 left-0 w-full pointer-events-none z-30 flex justify-between px-3 sm:px-4">
+
+            <!-- Left Pair of Hanging Brass Lamps -->
+            <div class="flex gap-3.5 sm:gap-5">
+                <!-- Far Left Diya (Higher) -->
+                <div class="sway-left flex flex-col items-center">
+                    <div class="w-[1.5px] h-11 sm:h-13 bg-gradient-to-b from-[#e5b245] via-[#ffd54f] to-[#996515] shadow-sm"></div>
+                    <div class="w-1.5 h-1.5 rounded-full bg-[#f3c14b] border border-[#7a4c07] -mt-0.5"></div>
+
+                    <div class="relative -mt-0.5 flex flex-col items-center">
+                        <!-- Flickering Teardrop Flame -->
+                        <div class="flame-anim-1 relative w-3.5 h-5 -mb-1 z-20">
+                            <svg viewBox="0 0 16 28" class="w-full h-full overflow-visible">
+                                <defs>
+                                    <radialGradient id="flameGradLeft1" cx="50%" cy="75%" r="65%">
+                                        <stop offset="0%" stop-color="#ffffff" />
+                                        <stop offset="30%" stop-color="#fff59d" />
+                                        <stop offset="65%" stop-color="#ff9800" />
+                                        <stop offset="100%" stop-color="#d84315" />
+                                    </radialGradient>
+                                </defs>
+                                <path d="M 8,1 C 12,9 15,17 14,22 C 13,26 10,27 8,27 C 6,27 3,26 2,22 C 1,17 4,9 8,1 Z" fill="url(#flameGradLeft1)" />
+                                <ellipse cx="8" cy="22" rx="2.5" ry="3.5" fill="#ffffff" opacity="0.95" />
+                            </svg>
+                        </div>
+
+                        <!-- Metallic Brass Diya Bowl -->
+                        <svg width="28" height="18" viewBox="0 0 34 20" fill="none">
+                            <defs>
+                                <linearGradient id="brassGrad1" x1="0" y1="0" x2="34" y2="20" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#FFF2A1" />
+                                    <stop offset="0.35" stop-color="#E5AD35" />
+                                    <stop offset="0.75" stop-color="#B3781A" />
+                                    <stop offset="1" stop-color="#553303" />
+                                </linearGradient>
+                            </defs>
+                            <ellipse cx="17" cy="5.5" rx="15" ry="3.5" fill="#ECC35C" stroke="#7A4C07" stroke-width="0.8" />
+                            <ellipse cx="17" cy="5.2" rx="12" ry="2.2" fill="#6A3B04" />
+                            <ellipse cx="17" cy="5.2" rx="9.5" ry="1.6" fill="#E67E22" opacity="0.85" />
+                            <path d="M 2,5.5 C 2,5.5 5,17 17,17 C 29,17 32,5.5 32,5.5 C 32,5.5 28,10 17,10 C 6,10 2,5.5 2,5.5 Z" fill="url(#brassGrad1)" stroke="#663B02" stroke-width="0.8" />
+                            <ellipse cx="17" cy="17" rx="4.5" ry="1.5" fill="#A86E12" stroke="#553303" stroke-width="0.6" />
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Mid Left Diya (Lower) -->
+                <div class="sway-right flex flex-col items-center">
+                    <div class="w-[1.5px] h-18 sm:h-22 bg-gradient-to-b from-[#e5b245] via-[#ffd54f] to-[#996515] shadow-sm"></div>
+                    <div class="w-1.5 h-1.5 rounded-full bg-[#f3c14b] border border-[#7a4c07] -mt-0.5"></div>
+
+                    <div class="relative -mt-0.5 flex flex-col items-center">
+                        <div class="flame-anim-2 relative w-3.5 h-5.5 -mb-1 z-20">
+                            <svg viewBox="0 0 16 28" class="w-full h-full overflow-visible">
+                                <path d="M 8,1 C 12,9 15,17 14,22 C 13,26 10,27 8,27 C 6,27 3,26 2,22 C 1,17 4,9 8,1 Z" fill="url(#flameGradLeft1)" />
+                                <ellipse cx="8" cy="22" rx="2.5" ry="3.5" fill="#ffffff" opacity="0.95" />
+                            </svg>
+                        </div>
+                        <svg width="30" height="19" viewBox="0 0 34 20" fill="none">
+                            <ellipse cx="17" cy="5.5" rx="15" ry="3.5" fill="#ECC35C" stroke="#7A4C07" stroke-width="0.8" />
+                            <ellipse cx="17" cy="5.2" rx="12" ry="2.2" fill="#6A3B04" />
+                            <ellipse cx="17" cy="5.2" rx="9.5" ry="1.6" fill="#E67E22" opacity="0.85" />
+                            <path d="M 2,5.5 C 2,5.5 5,17 17,17 C 29,17 32,5.5 32,5.5 C 32,5.5 28,10 17,10 C 6,10 2,5.5 2,5.5 Z" fill="url(#brassGrad1)" stroke="#663B02" stroke-width="0.8" />
+                            <ellipse cx="17" cy="17" rx="4.5" ry="1.5" fill="#A86E12" stroke="#553303" stroke-width="0.6" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Pair of Hanging Brass Lamps -->
+            <div class="flex gap-3.5 sm:gap-5">
+                <!-- Mid Right Diya (Lower) -->
+                <div class="sway-left flex flex-col items-center">
+                    <div class="w-[1.5px] h-18 sm:h-22 bg-gradient-to-b from-[#e5b245] via-[#ffd54f] to-[#996515] shadow-sm"></div>
+                    <div class="w-1.5 h-1.5 rounded-full bg-[#f3c14b] border border-[#7a4c07] -mt-0.5"></div>
+
+                    <div class="relative -mt-0.5 flex flex-col items-center">
+                        <div class="flame-anim-3 relative w-3.5 h-5.5 -mb-1 z-20">
+                            <svg viewBox="0 0 16 28" class="w-full h-full overflow-visible">
+                                <path d="M 8,1 C 12,9 15,17 14,22 C 13,26 10,27 8,27 C 6,27 3,26 2,22 C 1,17 4,9 8,1 Z" fill="url(#flameGradLeft1)" />
+                                <ellipse cx="8" cy="22" rx="2.5" ry="3.5" fill="#ffffff" opacity="0.95" />
+                            </svg>
+                        </div>
+                        <svg width="30" height="19" viewBox="0 0 34 20" fill="none">
+                            <ellipse cx="17" cy="5.5" rx="15" ry="3.5" fill="#ECC35C" stroke="#7A4C07" stroke-width="0.8" />
+                            <ellipse cx="17" cy="5.2" rx="12" ry="2.2" fill="#6A3B04" />
+                            <ellipse cx="17" cy="5.2" rx="9.5" ry="1.6" fill="#E67E22" opacity="0.85" />
+                            <path d="M 2,5.5 C 2,5.5 5,17 17,17 C 29,17 32,5.5 32,5.5 C 32,5.5 28,10 17,10 C 6,10 2,5.5 2,5.5 Z" fill="url(#brassGrad1)" stroke="#663B02" stroke-width="0.8" />
+                            <ellipse cx="17" cy="17" rx="4.5" ry="1.5" fill="#A86E12" stroke="#553303" stroke-width="0.6" />
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Far Right Diya (Higher) -->
+                <div class="sway-right flex flex-col items-center">
+                    <div class="w-[1.5px] h-11 sm:h-13 bg-gradient-to-b from-[#e5b245] via-[#ffd54f] to-[#996515] shadow-sm"></div>
+                    <div class="w-1.5 h-1.5 rounded-full bg-[#f3c14b] border border-[#7a4c07] -mt-0.5"></div>
+
+                    <div class="relative -mt-0.5 flex flex-col items-center">
+                        <div class="flame-anim-4 relative w-3.5 h-5 -mb-1 z-20">
+                            <svg viewBox="0 0 16 28" class="w-full h-full overflow-visible">
+                                <path d="M 8,1 C 12,9 15,17 14,22 C 13,26 10,27 8,27 C 6,27 3,26 2,22 C 1,17 4,9 8,1 Z" fill="url(#flameGradLeft1)" />
+                                <ellipse cx="8" cy="22" rx="2.5" ry="3.5" fill="#ffffff" opacity="0.95" />
+                            </svg>
+                        </div>
+                        <svg width="28" height="18" viewBox="0 0 34 20" fill="none">
+                            <ellipse cx="17" cy="5.5" rx="15" ry="3.5" fill="#ECC35C" stroke="#7A4C07" stroke-width="0.8" />
+                            <ellipse cx="17" cy="5.2" rx="12" ry="2.2" fill="#6A3B04" />
+                            <ellipse cx="17" cy="5.2" rx="9.5" ry="1.6" fill="#E67E22" opacity="0.85" />
+                            <path d="M 2,5.5 C 2,5.5 5,17 17,17 C 29,17 32,5.5 32,5.5 C 32,5.5 28,10 17,10 C 6,10 2,5.5 2,5.5 Z" fill="url(#brassGrad1)" stroke="#663B02" stroke-width="0.8" />
+                            <ellipse cx="17" cy="17" rx="4.5" ry="1.5" fill="#A86E12" stroke="#553303" stroke-width="0.6" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <svg class="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 500 889" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <!-- Cream Canvas Arch Gradient -->
+                <linearGradient id="creamArchGrad" x1="250" y1="50" x2="250" y2="860" gradientUnits="userSpaceOnUse">
+                    <stop offset="0%" stop-color="#FCF8EE" />
+                    <stop offset="50%" stop-color="#FAF2DE" />
+                    <stop offset="100%" stop-color="#F5E8CB" />
                 </linearGradient>
-              </defs>
-              <ellipse cx="17" cy="5.5" rx="15" ry="3.5" fill="#ECC35C" stroke="#7A4C07" stroke-width="0.8"/>
-              <ellipse cx="17" cy="5.2" rx="12" ry="2.2" fill="#6A3B04" />
-              <ellipse cx="17" cy="5.2" rx="9.5" ry="1.6" fill="#E67E22" opacity="0.85"/>
-              <path d="M 2,5.5 C 2,5.5 5,17 17,17 C 29,17 32,5.5 32,5.5 C 32,5.5 28,10 17,10 C 6,10 2,5.5 2,5.5 Z" fill="url(#brassGrad1)" stroke="#663B02" stroke-width="0.8"/>
-              <ellipse cx="17" cy="17" rx="4.5" ry="1.5" fill="#A86E12" stroke="#553303" stroke-width="0.6"/>
-            </svg>
-          </div>
-        </div>
 
-        <!-- Mid Left Diya (Lower) -->
-        <div class="sway-right flex flex-col items-center">
-          <div class="w-[1.5px] h-18 sm:h-22 bg-gradient-to-b from-[#e5b245] via-[#ffd54f] to-[#996515] shadow-sm"></div>
-          <div class="w-1.5 h-1.5 rounded-full bg-[#f3c14b] border border-[#7a4c07] -mt-0.5"></div>
-          
-          <div class="relative -mt-0.5 flex flex-col items-center">
-            <div class="flame-anim-2 relative w-3.5 h-5.5 -mb-1 z-20">
-              <svg viewBox="0 0 16 28" class="w-full h-full overflow-visible">
-                <path d="M 8,1 C 12,9 15,17 14,22 C 13,26 10,27 8,27 C 6,27 3,26 2,22 C 1,17 4,9 8,1 Z" fill="url(#flameGradLeft1)" />
-                <ellipse cx="8" cy="22" rx="2.5" ry="3.5" fill="#ffffff" opacity="0.95" />
-              </svg>
+                <!-- Antique Gold Stroke Gradient -->
+                <linearGradient id="goldBorderGrad" x1="50" y1="50" x2="450" y2="850" gradientUnits="userSpaceOnUse">
+                    <stop offset="0%" stop-color="#ECC66D" />
+                    <stop offset="35%" stop-color="#BF8D2C" />
+                    <stop offset="70%" stop-color="#E8BE5D" />
+                    <stop offset="100%" stop-color="#8F6218" />
+                </linearGradient>
+
+                <!-- Glossy Mango Leaf Gradient -->
+                <linearGradient id="leafGrad" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0%" stop-color="#1b5e20" />
+                    <stop offset="45%" stop-color="#2e7d32" />
+                    <stop offset="85%" stop-color="#144d18" />
+                    <stop offset="100%" stop-color="#0a2a0d" />
+                </linearGradient>
+
+                <!-- Reusable Realistic Mango Leaf Symbol -->
+                <g id="mango-leaf">
+                    <!-- Leaf Body with natural curved tapered tip -->
+                    <path d="M 0,0 C 7,-10 13,-24 0,-40 C -13,-24 -7,-10 0,0 Z" fill="url(#leafGrad)" />
+                    <!-- Central Spine Vein -->
+                    <path d="M 0,-2 C 0.8,-14 0.2,-28 0,-38" stroke="#81c784" stroke-width="0.8" opacity="0.65" stroke-linecap="round" />
+                    <!-- Subtle Lateral Veins -->
+                    <path d="M 0,-12 Q 4,-16 6,-18 M 0,-20 Q 5,-24 5,-27 M 0,-12 Q -4,-16 -6,-18 M 0,-20 Q -5,-24 -5,-27" stroke="#81c784" stroke-width="0.5" opacity="0.45" />
+                </g>
+
+                <!-- Reusable Realistic Multi-Petal Marigold (Genda Phool) -->
+                <g id="marigold-flower">
+                    <!-- Dark Warm Base Shadow / Sepal Underlay -->
+                    <circle cx="0" cy="0" r="11.5" fill="#BF360C" opacity="0.8" />
+
+                    <!-- Outer Tier: Ruffled Petal Silhouette -->
+                    <path d="M 0,-11.5 C 3,-11.5 5.5,-10 7.5,-8 C 9.5,-6 11.5,-3 11.5,0 C 11.5,3 9.5,6 7.5,8 C 5.5,10 3,11.5 0,11.5 C -3,11.5 -5.5,10 -7.5,8 C -9.5,6 -11.5,3 -11.5,0 C -11.5,-3 -9.5,-6 -7.5,-8 C -5.5,-10 -3,-11.5 0,-11.5 Z" fill="#E65100" />
+                    <circle cx="0" cy="0" r="10.8" fill="#F57C00" stroke="#BF360C" stroke-width="0.8" stroke-dasharray="2.4 1.2" />
+
+                    <!-- Mid-Outer Tier: Rich Saffron Petals -->
+                    <circle cx="0" cy="0" r="9" fill="#FF9800" stroke="#E65100" stroke-width="0.9" stroke-dasharray="2 1.2" />
+                    <circle cx="0" cy="0" r="7.4" fill="#FFA726" stroke="#EF6C00" stroke-width="0.8" stroke-dasharray="1.7 1" />
+
+                    <!-- Mid-Inner Tier: Golden Petal Ring -->
+                    <circle cx="0" cy="0" r="5.6" fill="#FFB74D" stroke="#E65100" stroke-width="0.7" stroke-dasharray="1.4 0.9" />
+                    <circle cx="0" cy="0" r="4" fill="#FFCC80" stroke="#F57C00" stroke-width="0.6" stroke-dasharray="1.1 0.7" />
+
+                    <!-- Center Crown / Pistil Cluster -->
+                    <circle cx="0" cy="0" r="2.6" fill="#FFE082" />
+                    <circle cx="0" cy="0" r="1.3" fill="#D84315" />
+                </g>
+            </defs>
+
+            <!-- Sacred Arched Temple Panel -->
+            <path d="M 50,854 L 50,290 C 50,270 60,250 75,235 C 90,220 100,205 105,185 C 115,145 155,90 220,62 C 240,53 260,53 280,62 C 345,90 385,145 395,185 C 400,205 410,220 425,235 C 440,250 450,270 450,290 L 450,854 Z"
+                fill="url(#creamArchGrad)"
+                stroke="url(#goldBorderGrad)" stroke-width="3" />
+
+            <!-- Inner Dotted Filigree Arch Line -->
+            <path d="M 55,850 L 55,292 C 55,274 65,255 79,241 C 93,227 103,212 108,193 C 118,154 156,101 218,74 C 238,65 262,65 282,74 C 344,101 382,154 392,193 C 397,212 407,227 421,241 C 435,255 445,274 445,292 L 445,850"
+                stroke="#DCA838" stroke-width="0.9" stroke-dasharray="3, 3" opacity="0.65" />
+
+            <!-- Fresh Marigold Garland & Realistic Mango Leaves -->
+            <g id="marigold-garland" class="garland-pulse">
+
+                <!-- Layer 1: Mango Leaves tucked behind flowers -->
+                <    <!-- Layer 1: Mango Leaves tucked directly behind marigold beads -->
+                    <g id="mango-leaves-layer">
+                        <!-- Apex Crown Leaves -->
+                        <g transform="translate(250, 72)"><g transform="rotate(0) scale(0.65)"><use href="#mango-leaf" /></g></g>
+                        <g transform="translate(240, 74)"><g transform="rotate(-28) scale(0.55)"><use href="#mango-leaf" /></g></g>
+                        <g transform="translate(260, 74)"><g transform="rotate(28) scale(0.55)"><use href="#mango-leaf" /></g></g>
+
+                        <!-- Arch Curvature Foliage (Left Side) -->
+                        <g transform="translate(221, 85)"><g transform="rotate(-30) scale(0.58)"><use href="#mango-leaf" /></g></g>
+                        <g transform="translate(202, 100)"><g transform="rotate(-45) scale(0.58)"><use href="#mango-leaf" /></g></g>
+                        <g transform="translate(183, 118)"><g transform="rotate(-52) scale(0.58)"><use href="#mango-leaf" /></g></g>
+                        <g transform="translate(165, 139)"><g transform="rotate(-60) scale(0.58)"><use href="#mango-leaf" /></g></g>
+                        <g transform="translate(147, 162)"><g transform="rotate(-68) scale(0.58)"><use href="#mango-leaf" /></g></g>
+                        <g transform="translate(128, 186)"><g transform="rotate(-78) scale(0.58)"><use href="#mango-leaf" /></g></g>
+                        <g transform="translate(108, 210)"><g transform="rotate(-88) scale(0.58)"><use href="#mango-leaf" /></g></g>
+                        <g transform="translate(88, 236)"><g transform="rotate(-96) scale(0.58)"><use href="#mango-leaf" /></g></g>
+
+                        <!-- Arch Curvature Foliage (Right Side) -->
+                        <g transform="translate(279, 85)"><g transform="rotate(30) scale(0.58)"><use href="#mango-leaf" /></g></g>
+                        <g transform="translate(298, 100)"><g transform="rotate(45) scale(0.58)"><use href="#mango-leaf" /></g></g>
+                        <g transform="translate(317, 118)"><g transform="rotate(52) scale(0.58)"><use href="#mango-leaf" /></g></g>
+                        <g transform="translate(335, 139)"><g transform="rotate(60) scale(0.58)"><use href="#mango-leaf" /></g></g>
+                        <g transform="translate(353, 162)"><g transform="rotate(68) scale(0.58)"><use href="#mango-leaf" /></g></g>
+                        <g transform="translate(372, 186)"><g transform="rotate(78) scale(0.58)"><use href="#mango-leaf" /></g></g>
+                        <g transform="translate(392, 210)"><g transform="rotate(88) scale(0.58)"><use href="#mango-leaf" /></g></g>
+                        <g transform="translate(412, 236)"><g transform="rotate(96) scale(0.58)"><use href="#mango-leaf" /></g></g>
+
+                        <!-- Vertical Hanging Drops (Pairs pointing outward) -->
+                        <g transform="translate(68, 294)"><g transform="rotate(-110) scale(0.52)"><use href="#mango-leaf" /></g></g>
+                        <g transform="translate(68, 374)"><g transform="rotate(-110) scale(0.52)"><use href="#mango-leaf" /></g></g>
+
+                        <g transform="translate(432, 294)"><g transform="rotate(110) scale(0.52)"><use href="#mango-leaf" /></g></g>
+                        <g transform="translate(432, 374)"><g transform="rotate(110) scale(0.52)"><use href="#mango-leaf" /></g></g>
+                    </g>
+
+
+                    <!-- Layer 2: Multi-Petal Marigold Blossoms -->
+                    <g id="marigold-flowers">
+                        <!-- Arch Crest -->
+                        <use href="#marigold-flower" x="250" y="73" transform="scale(1.08) translate(-18.5,-5.5)" />
+
+                        <use href="#marigold-flower" x="231" y="80" />
+                        <use href="#marigold-flower" x="269" y="80" />
+                        <use href="#marigold-flower" x="212" y="92" />
+                        <use href="#marigold-flower" x="288" y="92" />
+                        <use href="#marigold-flower" x="193" y="108" />
+                        <use href="#marigold-flower" x="307" y="108" />
+                        <use href="#marigold-flower" x="174" y="128" />
+                        <use href="#marigold-flower" x="326" y="128" />
+                        <use href="#marigold-flower" x="156" y="150" />
+                        <use href="#marigold-flower" x="344" y="150" />
+                        <use href="#marigold-flower" x="138" y="174" />
+                        <use href="#marigold-flower" x="362" y="174" />
+                        <use href="#marigold-flower" x="119" y="198" />
+                        <use href="#marigold-flower" x="381" y="198" />
+                        <use href="#marigold-flower" x="98" y="223" />
+                        <use href="#marigold-flower" x="402" y="223" />
+                        <use href="#marigold-flower" x="78" y="250" />
+                        <use href="#marigold-flower" x="422" y="250" />
+
+                        <!-- Left Hanging Column -->
+                        <use href="#marigold-flower" x="68" y="285" />
+                        <use href="#marigold-flower" x="68" y="303" />
+                        <use href="#marigold-flower" x="68" y="321" />
+                        <use href="#marigold-flower" x="68" y="365" />
+                        <use href="#marigold-flower" x="68" y="383" />
+                        <use href="#marigold-flower" x="68" y="401" />
+
+                        <!-- Right Hanging Column -->
+                        <use href="#marigold-flower" x="432" y="285" />
+                        <use href="#marigold-flower" x="432" y="303" />
+                        <use href="#marigold-flower" x="432" y="321" />
+                        <use href="#marigold-flower" x="432" y="365" />
+                        <use href="#marigold-flower" x="432" y="383" />
+                        <use href="#marigold-flower" x="432" y="401" />
+                    </g>
+                </g>
+
+
+                <!-- Left Mechanical Gear (Rotates Counter-Clockwise) -->
+                <g id="gear-bottom-left" class="gear-spin-left" opacity="0.38" stroke="#C9982F" stroke-width="1.4" fill="none">
+                    <circle cx="10" cy="870" r="105" stroke-width="2.5" />
+                    <circle cx="10" cy="870" r="82" stroke-dasharray="6, 4" stroke-width="1.2" />
+                    <circle cx="10" cy="870" r="50" stroke-width="1.8" />
+                    <circle cx="10" cy="870" r="22" fill="#E6B43E" fill-opacity="0.2" />
+                    <path d="M 10,760 L 17,760 L 22,772 L -2,772 L 3,760 Z" fill="#C9982F" />
+                    <path d="M 10,760 L 17,760 L 22,772 L -2,772 L 3,760 Z" transform="rotate(30 10 870)" fill="#C9982F" />
+                    <path d="M 10,760 L 17,760 L 22,772 L -2,772 L 3,760 Z" transform="rotate(60 10 870)" fill="#C9982F" />
+                    <path d="M 10,760 L 17,760 L 22,772 L -2,772 L 3,760 Z" transform="rotate(90 10 870)" fill="#C9982F" />
+                    <path d="M 10,760 L 17,760 L 22,772 L -2,772 L 3,760 Z" transform="rotate(120 10 870)" fill="#C9982F" />
+                    <path d="M 10,760 L 17,760 L 22,772 L -2,772 L 3,760 Z" transform="rotate(150 10 870)" fill="#C9982F" />
+                    <path d="M 10,760 L 17,760 L 22,772 L -2,772 L 3,760 Z" transform="rotate(180 10 870)" fill="#C9982F" />
+                    <path d="M 10,760 L 17,760 L 22,772 L -2,772 L 3,760 Z" transform="rotate(210 10 870)" fill="#C9982F" />
+                    <path d="M 10,760 L 17,760 L 22,772 L -2,772 L 3,760 Z" transform="rotate(240 10 870)" fill="#C9982F" />
+                    <path d="M 10,760 L 17,760 L 22,772 L -2,772 L 3,760 Z" transform="rotate(270 10 870)" fill="#C9982F" />
+                    <path d="M 10,760 L 17,760 L 22,772 L -2,772 L 3,760 Z" transform="rotate(300 10 870)" fill="#C9982F" />
+                    <path d="M 10,760 L 17,760 L 22,772 L -2,772 L 3,760 Z" transform="rotate(330 10 870)" fill="#C9982F" />
+                </g>
+
+                <!-- Right Mechanical Gear (Rotates Clockwise) -->
+                <g id="gear-bottom-right" class="gear-spin-right" opacity="0.38" stroke="#C9982F" stroke-width="1.4" fill="none">
+                    <circle cx="490" cy="870" r="105" stroke-width="2.5" />
+                    <circle cx="490" cy="870" r="82" stroke-dasharray="6, 4" stroke-width="1.2" />
+                    <circle cx="490" cy="870" r="50" stroke-width="1.8" />
+                    <circle cx="490" cy="870" r="22" fill="#E6B43E" fill-opacity="0.2" />
+                    <path d="M 490,760 L 497,760 L 502,772 L 478,772 L 483,760 Z" fill="#C9982F" />
+                    <path d="M 490,760 L 497,760 L 502,772 L 478,772 L 483,760 Z" transform="rotate(30 490 870)" fill="#C9982F" />
+                    <path d="M 490,760 L 497,760 L 502,772 L 478,772 L 483,760 Z" transform="rotate(60 490 870)" fill="#C9982F" />
+                    <path d="M 490,760 L 497,760 L 502,772 L 478,772 L 483,760 Z" transform="rotate(90 490 870)" fill="#C9982F" />
+                    <path d="M 490,760 L 497,760 L 502,772 L 478,772 L 483,760 Z" transform="rotate(120 490 870)" fill="#C9982F" />
+                    <path d="M 490,760 L 497,760 L 502,772 L 478,772 L 483,760 Z" transform="rotate(150 490 870)" fill="#C9982F" />
+                    <path d="M 490,760 L 497,760 L 502,772 L 478,772 L 483,760 Z" transform="rotate(180 490 870)" fill="#C9982F" />
+                    <path d="M 490,760 L 497,760 L 502,772 L 478,772 L 483,760 Z" transform="rotate(210 490 870)" fill="#C9982F" />
+                    <path d="M 490,760 L 497,760 L 502,772 L 478,772 L 483,760 Z" transform="rotate(240 490 870)" fill="#C9982F" />
+                    <path d="M 490,760 L 497,760 L 502,772 L 478,772 L 483,760 Z" transform="rotate(270 490 870)" fill="#C9982F" />
+                    <path d="M 490,760 L 497,760 L 502,772 L 478,772 L 483,760 Z" transform="rotate(300 490 870)" fill="#C9982F" />
+                    <path d="M 490,760 L 497,760 L 502,772 L 478,772 L 483,760 Z" transform="rotate(330 490 870)" fill="#C9982F" />
+                </g>
+
+                <!-- Clean PCB Circuit Lines (BCA & BCS Heritage) -->
+                <g id="circuit-traces" stroke="#C9982F" stroke-width="1.2" opacity="0.35" fill="none">
+                    <path d="M 60,670 L 110,670 L 135,695 L 135,745 L 90,790" />
+                    <circle cx="110" cy="670" r="2.5" fill="#DCA838" />
+                    <circle cx="90" cy="790" r="2.5" fill="#DCA838" />
+                    <path d="M 70,720 L 95,745 L 95,810 L 115,830" />
+                    <circle cx="115" cy="830" r="2.5" fill="#DCA838" />
+
+                    <path d="M 440,670 L 390,670 L 365,695 L 365,745 L 410,790" />
+                    <circle cx="390" cy="670" r="2.5" fill="#DCA838" />
+                    <circle cx="410" cy="790" r="2.5" fill="#DCA838" />
+                    <path d="M 430,720 L 405,745 L 405,810 L 385,830" />
+                    <circle cx="385" cy="830" r="2.5" fill="#DCA838" />
+                </g>
+            </svg>
+
+            <!-- UPPER CARD STAGE: REFINED SUN DISC + VISHWAKARMA -->
+            <div class="absolute inset-x-0 top-[10%] h-[43%] flex items-center justify-center pointer-events-none">
+
+                <div class="hero-light"></div>
+
+                <div class="absolute top-[-1%] hero-disc [clip-path:polygon(0%_0%,100%_0%,100%_87%,50%_58%,0%_87%)]
+                    ">
+
+                    <svg viewBox="0 0 200 200" class="absolute inset-0 w-full h-full overflow-visible z-0">
+                        <g class="halo-outer-spin" stroke="#BF8823" stroke-width="1.25" opacity="0.72">
+                            <circle cx="100" cy="100" r="82" fill="none" stroke-dasharray="4 5" />
+
+
+                            <circle cx="100" cy="100" r="62" fill="none" stroke="#A6731B" stroke-width="1" stroke-dasharray="3 4" />
+                            <g fill="#A6731B">
+                                <circle cx="100" cy="19" r="2.2" />
+                                <circle cx="181" cy="100" r="2.2" />
+                                <circle cx="100" cy="181" r="2.2" />
+                                <circle cx="19" cy="100" r="2.2" />
+                                <circle cx="43" cy="43" r="2.2" />
+                                <circle cx="157" cy="43" r="2.2" />
+                                <circle cx="43" cy="157" r="2.2" />
+                                <circle cx="157" cy="157" r="2.2" />
+                            </g>
+                        </g>
+                        <g class="halo-inner-spin">
+                            <circle cx="100" cy="100" r="52" fill="none" stroke="#B8860B" stroke-width="1" stroke-dasharray="2 4" opacity=".62" />
+                        </g>
+                    </svg>
+                </div>
+
+                <canvas id="photoCanvas" class="relative z-10 artwork-canvas"></canvas>
+
             </div>
-            <svg width="30" height="19" viewBox="0 0 34 20" fill="none">
-              <ellipse cx="17" cy="5.5" rx="15" ry="3.5" fill="#ECC35C" stroke="#7A4C07" stroke-width="0.8"/>
-              <ellipse cx="17" cy="5.2" rx="12" ry="2.2" fill="#6A3B04" />
-              <ellipse cx="17" cy="5.2" rx="9.5" ry="1.6" fill="#E67E22" opacity="0.85"/>
-              <path d="M 2,5.5 C 2,5.5 5,17 17,17 C 29,17 32,5.5 32,5.5 C 32,5.5 28,10 17,10 C 6,10 2,5.5 2,5.5 Z" fill="url(#brassGrad1)" stroke="#663B02" stroke-width="0.8"/>
-              <ellipse cx="17" cy="17" rx="4.5" ry="1.5" fill="#A86E12" stroke="#553303" stroke-width="0.6"/>
-            </svg>
-          </div>
-        </div>
-      </div>
 
-      <!-- Right Pair of Hanging Brass Lamps -->
-      <div class="flex gap-3.5 sm:gap-5">
-        <!-- Mid Right Diya (Lower) -->
-        <div class="sway-left flex flex-col items-center">
-          <div class="w-[1.5px] h-18 sm:h-22 bg-gradient-to-b from-[#e5b245] via-[#ffd54f] to-[#996515] shadow-sm"></div>
-          <div class="w-1.5 h-1.5 rounded-full bg-[#f3c14b] border border-[#7a4c07] -mt-0.5"></div>
-          
-          <div class="relative -mt-0.5 flex flex-col items-center">
-            <div class="flame-anim-3 relative w-3.5 h-5.5 -mb-1 z-20">
-              <svg viewBox="0 0 16 28" class="w-full h-full overflow-visible">
-                <path d="M 8,1 C 12,9 15,17 14,22 C 13,26 10,27 8,27 C 6,27 3,26 2,22 C 1,17 4,9 8,1 Z" fill="url(#flameGradLeft1)" />
-                <ellipse cx="8" cy="22" rx="2.5" ry="3.5" fill="#ffffff" opacity="0.95" />
-              </svg>
+            <!-- LOWER CARD HALF: PREMIUM EVENT DETAILS -->
+            <div class="details-panel">
+
+                <div class="w-full flex flex-col items-center">
+                    <h2 class="font-sanskrit text-[15px] sm:text-lg font-bold tracking-wide text-[#48080c] leading-tight">
+                        ॥ श्री विश्वकर्मणे नमः ॥
+                    </h2>
+
+                    <h1 class="font-cinzel text-[20px] sm:text-2xl font-extrabold tracking-[.10em] text-[#3d060a] uppercase leading-tight mt-1">
+                        VISHWAKARMA PUJA
+                    </h1>
+
+                    <p class="font-marcellus text-[13px] sm:text-base font-semibold tracking-wide text-[#59141a] mt-1">
+                        KARIMGANJ COLLEGE
+                    </p>
+                    <p class="text-[10px] sm:text-[13px] tracking-wide text-[#70242b] font-medium">
+                        Department of BCA & BCS
+                    </p>
+                </div>
+
+                <div class="flex items-center justify-center gap-2 w-4/5 my-1 opacity-75">
+                    <div class="h-px flex-1 bg-gradient-to-r from-transparent via-[#9b6326] to-[#9b6326]"></div>
+                    <span class="tech-accent text-[10px]">⚙</span>
+                    <div class="h-px flex-1 bg-gradient-to-l from-transparent via-[#9b6326] to-[#9b6326]"></div>
+                </div>
+
+                <p class="font-marcellus text-[10px] sm:text-sm text-[#4d1318] leading-relaxed max-w-[285px]">
+                    You are cordially invited to join us for the celebrations.
+                </p>
+
+                <div class="countdown-box" aria-live="polite">
+                    <div id="countdownLabel" class="countdown-label">
+                        Puja begins in
+                    </div>
+                    <div id="countdownValue" class="countdown-value">
+                        -- : -- : -- : --
+                    </div>
+                    <div class="countdown-units">
+                        DAYS &nbsp; HOURS &nbsp; MIN &nbsp; SEC
+                    </div>
+                </div>
+
+                <div class="event-card">
+                    <div class="event-row">
+                        <span class="event-icon">📅</span>
+                        <span>Thursday, 17 September 2026</span>
+                    </div>
+                    <div class="event-row">
+                        <span class="event-icon">⏰</span>
+                        <span>10:00 AM</span>
+                    </div>
+                    <div class="event-row">
+                        <span class="event-icon">📍</span>
+                        <span>BCA Department</span>
+                    </div>
+                </div>
+
             </div>
-            <svg width="30" height="19" viewBox="0 0 34 20" fill="none">
-              <ellipse cx="17" cy="5.5" rx="15" ry="3.5" fill="#ECC35C" stroke="#7A4C07" stroke-width="0.8"/>
-              <ellipse cx="17" cy="5.2" rx="12" ry="2.2" fill="#6A3B04" />
-              <ellipse cx="17" cy="5.2" rx="9.5" ry="1.6" fill="#E67E22" opacity="0.85"/>
-              <path d="M 2,5.5 C 2,5.5 5,17 17,17 C 29,17 32,5.5 32,5.5 C 32,5.5 28,10 17,10 C 6,10 2,5.5 2,5.5 Z" fill="url(#brassGrad1)" stroke="#663B02" stroke-width="0.8"/>
-              <ellipse cx="17" cy="17" rx="4.5" ry="1.5" fill="#A86E12" stroke="#553303" stroke-width="0.6"/>
-            </svg>
-          </div>
-        </div>
 
-        <!-- Far Right Diya (Higher) -->
-        <div class="sway-right flex flex-col items-center">
-          <div class="w-[1.5px] h-11 sm:h-13 bg-gradient-to-b from-[#e5b245] via-[#ffd54f] to-[#996515] shadow-sm"></div>
-          <div class="w-1.5 h-1.5 rounded-full bg-[#f3c14b] border border-[#7a4c07] -mt-0.5"></div>
-          
-          <div class="relative -mt-0.5 flex flex-col items-center">
-            <div class="flame-anim-4 relative w-3.5 h-5 -mb-1 z-20">
-              <svg viewBox="0 0 16 28" class="w-full h-full overflow-visible">
-                <path d="M 8,1 C 12,9 15,17 14,22 C 13,26 10,27 8,27 C 6,27 3,26 2,22 C 1,17 4,9 8,1 Z" fill="url(#flameGradLeft1)" />
-                <ellipse cx="8" cy="22" rx="2.5" ry="3.5" fill="#ffffff" opacity="0.95" />
-              </svg>
+            <div class="action-dock">
+                <!-- 1. Contribution / Dakshina -->
+                <button class="action-btn" onclick="handleContribution()">
+                    <span>🪔</span><span>Contribute</span>
+                </button>
+
+
+                <!-- 2. Google Maps Location -->
+                <a href="https://maps.google.com/?q=Karimganj+College+Department+of+BCA" target="_blank" rel="noopener noreferrer" class="action-btn">
+                    <span>📍</span><span>Location</span>
+                </a>
+
+                <!-- 3. Native Share -->
+                <button class="action-btn" onclick="shareInvitation()">
+                    <span>↗</span><span>Share</span>
+                </button>
             </div>
-            <svg width="28" height="18" viewBox="0 0 34 20" fill="none">
-              <ellipse cx="17" cy="5.5" rx="15" ry="3.5" fill="#ECC35C" stroke="#7A4C07" stroke-width="0.8"/>
-              <ellipse cx="17" cy="5.2" rx="12" ry="2.2" fill="#6A3B04" />
-              <ellipse cx="17" cy="5.2" rx="9.5" ry="1.6" fill="#E67E22" opacity="0.85"/>
-              <path d="M 2,5.5 C 2,5.5 5,17 17,17 C 29,17 32,5.5 32,5.5 C 32,5.5 28,10 17,10 C 6,10 2,5.5 2,5.5 Z" fill="url(#brassGrad1)" stroke="#663B02" stroke-width="0.8"/>
-              <ellipse cx="17" cy="17" rx="4.5" ry="1.5" fill="#A86E12" stroke="#553303" stroke-width="0.6"/>
-            </svg>
-          </div>
-        </div>
-      </div>
 
+        </main>
+
+        <div id="toastNotification" class="fixed bottom-6 z-50 transform translate-y-24 opacity-0 transition-all duration-300 pointer-events-none px-4 py-2 bg-amber-950/95 border border-amber-500/70 text-amber-200 text-xs rounded-full shadow-2xl flex items-center space-x-2 backdrop-blur">
+            <span id="toastIcon">✨</span>
+            <span id="toastMessage">Invitation copied!</span>
+        </div>
+        >
+        <!-- Desktop QR Code Modal -->
+        <div id="contribModal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm transition-opacity">
+            <div class="w-full max-w-xs bg-[#2b0407] border border-[#a26829] rounded-2xl p-5 text-center text-neutral-100 flex flex-col items-center shadow-2xl">
+                <div class="w-9 h-9 rounded-full bg-amber-400/20 border border-amber-500/50 flex items-center justify-center text-base mb-1.5">
+                    🪔
+                </div>
+                <h3 class="font-cinzel text-base font-bold text-amber-200">Puja Contribution</h3>
+                <p class="text-[11px] text-amber-100/70 mt-0.5 mb-3">
+                    Scan with GPay, PhonePe, Paytm, or BHIM
+                </p>
+
+                <!-- Attached QR Code Image -->
+                <div class="bg-white p-2 rounded-xl shadow-inner mb-3">
+                    <img
+                    src="upi-qr.png"
+                    alt="Scan to Pay via UPI"
+                    class="w-44 h-44 mx-auto rounded-lg object-contain"
+                    />
+            </div>
+
+            <!-- UPI ID Bar with 1-Click Copy -->
+            <div class="w-full bg-[#1c0205] border border-amber-500/30 rounded-xl p-2.5 mb-3 flex items-center justify-between">
+                <div class="text-left overflow-hidden">
+                    <div class="text-[8px] uppercase tracking-wider text-amber-400/80 font-bold">
+                        UPI ID
+                    </div>
+                    <div id="upiAddressText" class="text-xs font-mono font-semibold text-amber-100 truncate">
+                        7086658830@ptyes
+                    </div>
+                </div>
+                <button onclick="copyUpiId()" class="ml-2 px-2.5 py-1 text-[10px] rounded-lg bg-amber-500 hover:bg-amber-400 text-stone-950 font-bold transition active:scale-95">
+                    Copy
+                </button>
+            </div>
+
+            <button onclick="closeContributionModal()" class="w-full py-1.5 text-xs rounded-xl text-neutral-400 hover:text-white transition">
+                Close
+            </button>
+        </div>
     </div>
 
-    <svg class="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 500 889" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <!-- Cream Canvas Arch Gradient -->
-        <linearGradient id="creamArchGrad" x1="250" y1="50" x2="250" y2="860" gradientUnits="userSpaceOnUse">
-          <stop offset="0%" stop-color="#FCF8EE" />
-          <stop offset="50%" stop-color="#FAF2DE" />
-          <stop offset="100%" stop-color="#F5E8CB" />
-        </linearGradient>
-
-        <!-- Antique Gold Stroke Gradient -->
-        <linearGradient id="goldBorderGrad" x1="50" y1="50" x2="450" y2="850" gradientUnits="userSpaceOnUse">
-          <stop offset="0%" stop-color="#ECC66D" />
-          <stop offset="35%" stop-color="#BF8D2C" />
-          <stop offset="70%" stop-color="#E8BE5D" />
-          <stop offset="100%" stop-color="#8F6218" />
-        </linearGradient>
-
-        <!-- Glossy Mango Leaf Gradient -->
-        <linearGradient id="leafGrad" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0%" stop-color="#1b5e20" />
-          <stop offset="45%" stop-color="#2e7d32" />
-          <stop offset="85%" stop-color="#144d18" />
-          <stop offset="100%" stop-color="#0a2a0d" />
-        </linearGradient>
-
-        <!-- Reusable Realistic Mango Leaf Symbol -->
-        <g id="mango-leaf">
-          <!-- Leaf Body with natural curved tapered tip -->
-          <path d="M 0,0 C 7,-10 13,-24 0,-40 C -13,-24 -7,-10 0,0 Z" fill="url(#leafGrad)" />
-          <!-- Central Spine Vein -->
-          <path d="M 0,-2 C 0.8,-14 0.2,-28 0,-38" stroke="#81c784" stroke-width="0.8" opacity="0.65" stroke-linecap="round" />
-          <!-- Subtle Lateral Veins -->
-          <path d="M 0,-12 Q 4,-16 6,-18 M 0,-20 Q 5,-24 5,-27 M 0,-12 Q -4,-16 -6,-18 M 0,-20 Q -5,-24 -5,-27" stroke="#81c784" stroke-width="0.5" opacity="0.45" />
-        </g>
-
-        <!-- Reusable Realistic Multi-Petal Marigold (Genda Phool) -->
-        <g id="marigold-flower">
-          <!-- Dark Warm Base Shadow / Sepal Underlay -->
-          <circle cx="0" cy="0" r="11.5" fill="#BF360C" opacity="0.8" />
-          
-          <!-- Outer Tier: Ruffled Petal Silhouette -->
-          <path d="M 0,-11.5 C 3,-11.5 5.5,-10 7.5,-8 C 9.5,-6 11.5,-3 11.5,0 C 11.5,3 9.5,6 7.5,8 C 5.5,10 3,11.5 0,11.5 C -3,11.5 -5.5,10 -7.5,8 C -9.5,6 -11.5,3 -11.5,0 C -11.5,-3 -9.5,-6 -7.5,-8 C -5.5,-10 -3,-11.5 0,-11.5 Z" fill="#E65100" />
-          <circle cx="0" cy="0" r="10.8" fill="#F57C00" stroke="#BF360C" stroke-width="0.8" stroke-dasharray="2.4 1.2" />
-          
-          <!-- Mid-Outer Tier: Rich Saffron Petals -->
-          <circle cx="0" cy="0" r="9" fill="#FF9800" stroke="#E65100" stroke-width="0.9" stroke-dasharray="2 1.2" />
-          <circle cx="0" cy="0" r="7.4" fill="#FFA726" stroke="#EF6C00" stroke-width="0.8" stroke-dasharray="1.7 1" />
-          
-          <!-- Mid-Inner Tier: Golden Petal Ring -->
-          <circle cx="0" cy="0" r="5.6" fill="#FFB74D" stroke="#E65100" stroke-width="0.7" stroke-dasharray="1.4 0.9" />
-          <circle cx="0" cy="0" r="4" fill="#FFCC80" stroke="#F57C00" stroke-width="0.6" stroke-dasharray="1.1 0.7" />
-          
-          <!-- Center Crown / Pistil Cluster -->
-          <circle cx="0" cy="0" r="2.6" fill="#FFE082" />
-          <circle cx="0" cy="0" r="1.3" fill="#D84315" />
-        </g>
-      </defs>
-
-      <!-- Sacred Arched Temple Panel -->
-      <path d="M 50,854 L 50,290 C 50,270 60,250 75,235 C 90,220 100,205 105,185 C 115,145 155,90 220,62 C 240,53 260,53 280,62 C 345,90 385,145 395,185 C 400,205 410,220 425,235 C 440,250 450,270 450,290 L 450,854 Z"
-            fill="url(#creamArchGrad)"
-            stroke="url(#goldBorderGrad)" stroke-width="3" />
-
-      <!-- Inner Dotted Filigree Arch Line -->
-      <path d="M 55,850 L 55,292 C 55,274 65,255 79,241 C 93,227 103,212 108,193 C 118,154 156,101 218,74 C 238,65 262,65 282,74 C 344,101 382,154 392,193 C 397,212 407,227 421,241 C 435,255 445,274 445,292 L 445,850"
-            stroke="#DCA838" stroke-width="0.9" stroke-dasharray="3, 3" opacity="0.65" />
-
-      <!-- Fresh Marigold Garland & Realistic Mango Leaves -->
-      <g id="marigold-garland" class="garland-pulse">
-        
-        <!-- Layer 1: Mango Leaves tucked behind flowers -->
-        <    <!-- Layer 1: Mango Leaves tucked directly behind marigold beads -->
-    <g id="mango-leaves-layer">
-      <!-- Apex Crown Leaves -->
-      <g transform="translate(250, 72)"><g transform="rotate(0) scale(0.65)"><use href="#mango-leaf"/></g></g>
-      <g transform="translate(240, 74)"><g transform="rotate(-28) scale(0.55)"><use href="#mango-leaf"/></g></g>
-      <g transform="translate(260, 74)"><g transform="rotate(28) scale(0.55)"><use href="#mango-leaf"/></g></g>
-
-      <!-- Arch Curvature Foliage (Left Side) -->
-      <g transform="translate(221, 85)"><g transform="rotate(-30) scale(0.58)"><use href="#mango-leaf"/></g></g>
-      <g transform="translate(202, 100)"><g transform="rotate(-45) scale(0.58)"><use href="#mango-leaf"/></g></g>
-      <g transform="translate(183, 118)"><g transform="rotate(-52) scale(0.58)"><use href="#mango-leaf"/></g></g>
-      <g transform="translate(165, 139)"><g transform="rotate(-60) scale(0.58)"><use href="#mango-leaf"/></g></g>
-      <g transform="translate(147, 162)"><g transform="rotate(-68) scale(0.58)"><use href="#mango-leaf"/></g></g>
-      <g transform="translate(128, 186)"><g transform="rotate(-78) scale(0.58)"><use href="#mango-leaf"/></g></g>
-      <g transform="translate(108, 210)"><g transform="rotate(-88) scale(0.58)"><use href="#mango-leaf"/></g></g>
-      <g transform="translate(88, 236)"><g transform="rotate(-96) scale(0.58)"><use href="#mango-leaf"/></g></g>
-
-      <!-- Arch Curvature Foliage (Right Side) -->
-      <g transform="translate(279, 85)"><g transform="rotate(30) scale(0.58)"><use href="#mango-leaf"/></g></g>
-      <g transform="translate(298, 100)"><g transform="rotate(45) scale(0.58)"><use href="#mango-leaf"/></g></g>
-      <g transform="translate(317, 118)"><g transform="rotate(52) scale(0.58)"><use href="#mango-leaf"/></g></g>
-      <g transform="translate(335, 139)"><g transform="rotate(60) scale(0.58)"><use href="#mango-leaf"/></g></g>
-      <g transform="translate(353, 162)"><g transform="rotate(68) scale(0.58)"><use href="#mango-leaf"/></g></g>
-      <g transform="translate(372, 186)"><g transform="rotate(78) scale(0.58)"><use href="#mango-leaf"/></g></g>
-      <g transform="translate(392, 210)"><g transform="rotate(88) scale(0.58)"><use href="#mango-leaf"/></g></g>
-      <g transform="translate(412, 236)"><g transform="rotate(96) scale(0.58)"><use href="#mango-leaf"/></g></g>
-
-      <!-- Vertical Hanging Drops (Pairs pointing outward) -->
-      <g transform="translate(68, 294)"><g transform="rotate(-110) scale(0.52)"><use href="#mango-leaf"/></g></g>
-      <g transform="translate(68, 374)"><g transform="rotate(-110) scale(0.52)"><use href="#mango-leaf"/></g></g>
-
-      <g transform="translate(432, 294)"><g transform="rotate(110) scale(0.52)"><use href="#mango-leaf"/></g></g>
-      <g transform="translate(432, 374)"><g transform="rotate(110) scale(0.52)"><use href="#mango-leaf"/></g></g>
-    </g>
 
 
-        <!-- Layer 2: Multi-Petal Marigold Blossoms -->
-        <g id="marigold-flowers">
-          <!-- Arch Crest -->
-          <use href="#marigold-flower" x="250" y="73" transform="scale(1.08) translate(-18.5,-5.5)" />
-          
-          <use href="#marigold-flower" x="231" y="80" />
-          <use href="#marigold-flower" x="269" y="80" />
-          <use href="#marigold-flower" x="212" y="92" />
-          <use href="#marigold-flower" x="288" y="92" />
-          <use href="#marigold-flower" x="193" y="108" />
-          <use href="#marigold-flower" x="307" y="108" />
-          <use href="#marigold-flower" x="174" y="128" />
-          <use href="#marigold-flower" x="326" y="128" />
-          <use href="#marigold-flower" x="156" y="150" />
-          <use href="#marigold-flower" x="344" y="150" />
-          <use href="#marigold-flower" x="138" y="174" />
-          <use href="#marigold-flower" x="362" y="174" />
-          <use href="#marigold-flower" x="119" y="198" />
-          <use href="#marigold-flower" x="381" y="198" />
-          <use href="#marigold-flower" x="98"  y="223" />
-          <use href="#marigold-flower" x="402" y="223" />
-          <use href="#marigold-flower" x="78"  y="250" />
-          <use href="#marigold-flower" x="422" y="250" />
+    <script>
+        // Fixed Lord Vishwakarma artwork
+        const photoCanvas = document.getElementById('photoCanvas');
+        const ctx = photoCanvas.getContext('2d', {
+            willReadFrequently: true
+        });
 
-          <!-- Left Hanging Column -->
-          <use href="#marigold-flower" x="68" y="285" />
-          <use href="#marigold-flower" x="68" y="303" />
-          <use href="#marigold-flower" x="68" y="321" />
-          <use href="#marigold-flower" x="68" y="365" />
-          <use href="#marigold-flower" x="68" y="383" />
-          <use href="#marigold-flower" x="68" y="401" />
-
-          <!-- Right Hanging Column -->
-          <use href="#marigold-flower" x="432" y="285" />
-          <use href="#marigold-flower" x="432" y="303" />
-          <use href="#marigold-flower" x="432" y="321" />
-          <use href="#marigold-flower" x="432" y="365" />
-          <use href="#marigold-flower" x="432" y="383" />
-          <use href="#marigold-flower" x="432" y="401" />
-        </g>
-      </g>
-
-
-      <!-- Left Mechanical Gear (Rotates Counter-Clockwise) -->
-      <g id="gear-bottom-left" class="gear-spin-left" opacity="0.38" stroke="#C9982F" stroke-width="1.4" fill="none">
-        <circle cx="10" cy="870" r="105" stroke-width="2.5" />
-        <circle cx="10" cy="870" r="82" stroke-dasharray="6, 4" stroke-width="1.2" />
-        <circle cx="10" cy="870" r="50" stroke-width="1.8" />
-        <circle cx="10" cy="870" r="22" fill="#E6B43E" fill-opacity="0.2" />
-        <path d="M 10,760 L 17,760 L 22,772 L -2,772 L 3,760 Z" fill="#C9982F" />
-        <path d="M 10,760 L 17,760 L 22,772 L -2,772 L 3,760 Z" transform="rotate(30 10 870)" fill="#C9982F" />
-        <path d="M 10,760 L 17,760 L 22,772 L -2,772 L 3,760 Z" transform="rotate(60 10 870)" fill="#C9982F" />
-        <path d="M 10,760 L 17,760 L 22,772 L -2,772 L 3,760 Z" transform="rotate(90 10 870)" fill="#C9982F" />
-        <path d="M 10,760 L 17,760 L 22,772 L -2,772 L 3,760 Z" transform="rotate(120 10 870)" fill="#C9982F" />
-        <path d="M 10,760 L 17,760 L 22,772 L -2,772 L 3,760 Z" transform="rotate(150 10 870)" fill="#C9982F" />
-        <path d="M 10,760 L 17,760 L 22,772 L -2,772 L 3,760 Z" transform="rotate(180 10 870)" fill="#C9982F" />
-        <path d="M 10,760 L 17,760 L 22,772 L -2,772 L 3,760 Z" transform="rotate(210 10 870)" fill="#C9982F" />
-        <path d="M 10,760 L 17,760 L 22,772 L -2,772 L 3,760 Z" transform="rotate(240 10 870)" fill="#C9982F" />
-        <path d="M 10,760 L 17,760 L 22,772 L -2,772 L 3,760 Z" transform="rotate(270 10 870)" fill="#C9982F" />
-        <path d="M 10,760 L 17,760 L 22,772 L -2,772 L 3,760 Z" transform="rotate(300 10 870)" fill="#C9982F" />
-        <path d="M 10,760 L 17,760 L 22,772 L -2,772 L 3,760 Z" transform="rotate(330 10 870)" fill="#C9982F" />
-      </g>
-
-      <!-- Right Mechanical Gear (Rotates Clockwise) -->
-      <g id="gear-bottom-right" class="gear-spin-right" opacity="0.38" stroke="#C9982F" stroke-width="1.4" fill="none">
-        <circle cx="490" cy="870" r="105" stroke-width="2.5" />
-        <circle cx="490" cy="870" r="82" stroke-dasharray="6, 4" stroke-width="1.2" />
-        <circle cx="490" cy="870" r="50" stroke-width="1.8" />
-        <circle cx="490" cy="870" r="22" fill="#E6B43E" fill-opacity="0.2" />
-        <path d="M 490,760 L 497,760 L 502,772 L 478,772 L 483,760 Z" fill="#C9982F" />
-        <path d="M 490,760 L 497,760 L 502,772 L 478,772 L 483,760 Z" transform="rotate(30 490 870)" fill="#C9982F" />
-        <path d="M 490,760 L 497,760 L 502,772 L 478,772 L 483,760 Z" transform="rotate(60 490 870)" fill="#C9982F" />
-        <path d="M 490,760 L 497,760 L 502,772 L 478,772 L 483,760 Z" transform="rotate(90 490 870)" fill="#C9982F" />
-        <path d="M 490,760 L 497,760 L 502,772 L 478,772 L 483,760 Z" transform="rotate(120 490 870)" fill="#C9982F" />
-        <path d="M 490,760 L 497,760 L 502,772 L 478,772 L 483,760 Z" transform="rotate(150 490 870)" fill="#C9982F" />
-        <path d="M 490,760 L 497,760 L 502,772 L 478,772 L 483,760 Z" transform="rotate(180 490 870)" fill="#C9982F" />
-        <path d="M 490,760 L 497,760 L 502,772 L 478,772 L 483,760 Z" transform="rotate(210 490 870)" fill="#C9982F" />
-        <path d="M 490,760 L 497,760 L 502,772 L 478,772 L 483,760 Z" transform="rotate(240 490 870)" fill="#C9982F" />
-        <path d="M 490,760 L 497,760 L 502,772 L 478,772 L 483,760 Z" transform="rotate(270 490 870)" fill="#C9982F" />
-        <path d="M 490,760 L 497,760 L 502,772 L 478,772 L 483,760 Z" transform="rotate(300 490 870)" fill="#C9982F" />
-        <path d="M 490,760 L 497,760 L 502,772 L 478,772 L 483,760 Z" transform="rotate(330 490 870)" fill="#C9982F" />
-      </g>
-
-      <!-- Clean PCB Circuit Lines (BCA & BCS Heritage) -->
-      <g id="circuit-traces" stroke="#C9982F" stroke-width="1.2" opacity="0.35" fill="none">
-        <path d="M 60,670 L 110,670 L 135,695 L 135,745 L 90,790" />
-        <circle cx="110" cy="670" r="2.5" fill="#DCA838" />
-        <circle cx="90" cy="790" r="2.5" fill="#DCA838" />
-        <path d="M 70,720 L 95,745 L 95,810 L 115,830" />
-        <circle cx="115" cy="830" r="2.5" fill="#DCA838" />
-
-        <path d="M 440,670 L 390,670 L 365,695 L 365,745 L 410,790" />
-        <circle cx="390" cy="670" r="2.5" fill="#DCA838" />
-        <circle cx="410" cy="790" r="2.5" fill="#DCA838" />
-        <path d="M 430,720 L 405,745 L 405,810 L 385,830" />
-        <circle cx="385" cy="830" r="2.5" fill="#DCA838" />
-      </g>
-    </svg>
-
-    <!-- UPPER CARD STAGE: REFINED SUN DISC + VISHWAKARMA -->
-    <div class="absolute inset-x-0 top-[10%] h-[43%] flex items-center justify-center pointer-events-none">
-
-      <div class="hero-light"></div>
-
-      <div class="absolute top-[-1%] hero-disc [clip-path:polygon(0%_0%,100%_0%,100%_87%,50%_58%,0%_87%)]
-">
-
-        <svg viewBox="0 0 200 200" class="absolute inset-0 w-full h-full overflow-visible z-0">
-          <g class="halo-outer-spin" stroke="#BF8823" stroke-width="1.25" opacity="0.72">
-            <circle cx="100" cy="100" r="82" fill="none" stroke-dasharray="4 5"/>
-            
-
-            <circle cx="100" cy="100" r="62" fill="none" stroke="#A6731B" stroke-width="1" stroke-dasharray="3 4"/>
-            <g fill="#A6731B">
-              <circle cx="100" cy="19" r="2.2"/>
-              <circle cx="181" cy="100" r="2.2"/>
-              <circle cx="100" cy="181" r="2.2"/>
-              <circle cx="19" cy="100" r="2.2"/>
-              <circle cx="43" cy="43" r="2.2"/>
-              <circle cx="157" cy="43" r="2.2"/>
-              <circle cx="43" cy="157" r="2.2"/>
-              <circle cx="157" cy="157" r="2.2"/>
-            </g>
-          </g>
-          <g class="halo-inner-spin">
-            <circle cx="100" cy="100" r="52" fill="none" stroke="#B8860B" stroke-width="1" stroke-dasharray="2 4" opacity=".62"/>
-          </g>
-        </svg>
-      </div>
-
-      <canvas id="photoCanvas" class="relative z-10 artwork-canvas"></canvas>
-
-    </div>
-
-    <!-- LOWER CARD HALF: PREMIUM EVENT DETAILS -->
-    <div class="details-panel">
-
-      <div class="w-full flex flex-col items-center">
-        <h2 class="font-sanskrit text-[15px] sm:text-lg font-bold tracking-wide text-[#48080c] leading-tight">
-          ॥ श्री विश्वकर्मणे नमः ॥
-        </h2>
-
-        <h1 class="font-cinzel text-[20px] sm:text-2xl font-extrabold tracking-[.10em] text-[#3d060a] uppercase leading-tight mt-1">
-          VISHWAKARMA PUJA
-        </h1>
-
-        <p class="font-marcellus text-[13px] sm:text-base font-semibold tracking-wide text-[#59141a] mt-1">
-          KARIMGANJ COLLEGE
-        </p>
-        <p class="text-[10px] sm:text-[13px] tracking-wide text-[#70242b] font-medium">
-          Department of BCA & BCS
-        </p>
-      </div>
-
-      <div class="flex items-center justify-center gap-2 w-4/5 my-1 opacity-75">
-        <div class="h-px flex-1 bg-gradient-to-r from-transparent via-[#9b6326] to-[#9b6326]"></div>
-        <span class="tech-accent text-[10px]">⚙</span>
-        <div class="h-px flex-1 bg-gradient-to-l from-transparent via-[#9b6326] to-[#9b6326]"></div>
-      </div>
-
-      <p class="font-marcellus text-[10px] sm:text-sm text-[#4d1318] leading-relaxed max-w-[285px]">
-        You are cordially invited to join us for the celebrations.
-      </p>
-
-      <div class="countdown-box" aria-live="polite">
-        <div id="countdownLabel" class="countdown-label">Puja begins in</div>
-        <div id="countdownValue" class="countdown-value">-- : -- : -- : --</div>
-        <div class="countdown-units">DAYS &nbsp; HOURS &nbsp; MIN &nbsp; SEC</div>
-      </div>
-
-      <div class="event-card">
-        <div class="event-row">
-          <span class="event-icon">📅</span>
-          <span>Thursday, 17 September 2026</span>
-        </div>
-        <div class="event-row">
-          <span class="event-icon">⏰</span>
-          <span>10:00 AM</span>
-        </div>
-        <div class="event-row">
-          <span class="event-icon">📍</span>
-          <span>BCA Department</span>
-        </div>
-      </div>
-
-    </div>
-
-    <div class="action-dock">
-      <button class="action-btn" onclick="copyEventDetails()">
-        <span>📋</span><span id="copyBtnText">Copy</span>
-      </button>
-      <button class="action-btn" onclick="shareInvitation()">
-        <span>↗</span><span>Share</span>
-      </button>
-      <button class="action-btn" onclick="saveCalendarEvent()">
-        <span>📅</span><span>Save</span>
-      </button>
-    </div>
-
-  </main>
-
-  <div id="toastNotification" class="fixed bottom-6 z-50 transform translate-y-24 opacity-0 transition-all duration-300 pointer-events-none px-4 py-2 bg-amber-950/95 border border-amber-500/70 text-amber-200 text-xs rounded-full shadow-2xl flex items-center space-x-2 backdrop-blur">
-    <span id="toastIcon">✨</span>
-    <span id="toastMessage">Invitation copied!</span>
-  </div>
-
-  <script>
-    // Fixed Lord Vishwakarma artwork
-    const photoCanvas = document.getElementById('photoCanvas');
-    const ctx = photoCanvas.getContext('2d', { willReadFrequently: true });
-
-    function loadLordVishwakarmaArtwork() {
-      const img = new Image();
-      img.onload = () => renderArtworkWithTransparency(img);
-      img.onerror = () => console.error('Could not load 1000127164.png');
-      img.src = '1000127164.png';
-    }
-
-    function renderArtworkWithTransparency(img) {
-      const width = 360;
-      const height = 430;
-
-      photoCanvas.width = width;
-      photoCanvas.height = height;
-      ctx.clearRect(0, 0, width, height);
-
-      const scale = Math.min(width / img.width, height / img.height);
-      const dw = img.width * scale;
-      const dh = img.height * scale;
-      const dx = (width - dw) / 2;
-      const dy = (height - dh) / 2;
-
-      ctx.drawImage(img, dx, dy, dw, dh);
-
-      // Convert the near-black background to transparent and enrich the
-      // supplied line artwork into a warm antique-gold tone.
-      try {
-        const pixels = ctx.getImageData(0, 0, width, height);
-        const data = pixels.data;
-
-        for (let i = 0; i < data.length; i += 4) {
-          const r = data[i], g = data[i + 1], b = data[i + 2];
-          const brightness = (r * 0.299) + (g * 0.587) + (b * 0.114);
-
-          if (brightness < 38) {
-            data[i + 3] = 0;
-            continue;
-          }
-
-          const alpha = Math.min(255, Math.max(0, ((brightness - 38) / 82) * 255));
-          data[i + 3] = alpha;
-
-          // Antique-gold line treatment, preserving brightness detail.
-          const tone = Math.min(1, brightness / 180);
-          data[i]     = Math.round(116 + 74 * tone);
-          data[i + 1] = Math.round(82 + 60 * tone);
-          data[i + 2] = Math.round(34 + 30 * tone);
+        function loadLordVishwakarmaArtwork() {
+            const img = new Image();
+            img.onload = () => renderArtworkWithTransparency(img);
+            img.onerror = () => console.error('Could not load 1000127164.png');
+            img.src = '1000127164.png';
         }
 
-        ctx.putImageData(pixels, 0, 0);
-      } catch (err) {
-        console.warn('Artwork transparency processing unavailable:', err);
-      }
-    }
+        function renderArtworkWithTransparency(img) {
+            const width = 360;
+            const height = 430;
 
-    let audioCtx = null;
-    let isPlayingAudio = false;
-    let audioTimer = null;
+            photoCanvas.width = width;
+            photoCanvas.height = height;
+            ctx.clearRect(0, 0, width, height);
 
-    function initAudioContext() {
-      if (!audioCtx) {
-        const AudioContextClass = window.AudioContext || window.webkitAudioContext;
-        audioCtx = new AudioContextClass();
-      }
-      if (audioCtx.state === 'suspended') {
-        audioCtx.resume();
-      }
-    }
+            const scale = Math.min(width / img.width, height / img.height);
+            const dw = img.width * scale;
+            const dh = img.height * scale;
+            const dx = (width - dw) / 2;
+            const dy = (height - dh) / 2;
 
-    function playTempleChime(freq = 432, duration = 3.6) {
-      if (!audioCtx) return;
-      const now = audioCtx.currentTime;
-      
-      const osc = audioCtx.createOscillator();
-      const gain = audioCtx.createGain();
-      
-      osc.type = 'sine';
-      osc.frequency.setValueAtTime(freq, now);
-      osc.frequency.exponentialRampToValueAtTime(freq * 1.003, now + duration);
+            ctx.drawImage(img, dx, dy, dw, dh);
 
-      gain.gain.setValueAtTime(0, now);
-      gain.gain.linearRampToValueAtTime(0.28, now + 0.04);
-      gain.gain.exponentialRampToValueAtTime(0.0001, now + duration);
+            // Convert the near-black background to transparent and enrich the
+            // supplied line artwork into a warm antique-gold tone.
+            try {
+                const pixels = ctx.getImageData(0, 0, width, height);
+                const data = pixels.data;
 
-      osc.connect(gain);
-      gain.connect(audioCtx.destination);
+                for (let i = 0; i < data.length; i += 4) {
+                    const r = data[i],
+                    g = data[i + 1],
+                    b = data[i + 2];
+                    const brightness = (r * 0.299) + (g * 0.587) + (b * 0.114);
 
-      osc.start(now);
-      osc.stop(now + duration);
-    }
+                    if (brightness < 38) {
+                        data[i + 3] = 0;
+                        continue;
+                    }
 
-    function toggleDivineSound() {
-      try {
-        initAudioContext();
-        const btn = document.getElementById('audioToggleBtn');
-        const text = document.getElementById('audioText');
+                    const alpha = Math.min(255, Math.max(0, ((brightness - 38) / 82) * 255));
+                    data[i + 3] = alpha;
 
-        if (!isPlayingAudio) {
-          isPlayingAudio = true;
-          text.textContent = 'Playing';
-          btn.classList.add('bg-amber-800', 'border-amber-300');
-          showToast('🎵 Divine chimes playing', '🔔');
+                    // Antique-gold line treatment, preserving brightness detail.
+                    const tone = Math.min(1, brightness / 180);
+                    data[i] = Math.round(116 + 74 * tone);
+                    data[i + 1] = Math.round(82 + 60 * tone);
+                    data[i + 2] = Math.round(34 + 30 * tone);
+                }
 
-          const chord = [288, 384, 432, 576];
-          let step = 0;
-          
-          playTempleChime(chord[0], 4);
-          audioTimer = setInterval(() => {
-            step = (step + 1) % chord.length;
-            playTempleChime(chord[step], 3.8);
-          }, 1800);
-
-        } else {
-          isPlayingAudio = false;
-          clearInterval(audioTimer);
-          text.textContent = 'Play';
-          btn.classList.remove('bg-amber-800', 'border-amber-300');
-          showToast('Audio paused', '🔇');
+                ctx.putImageData(pixels, 0, 0);
+            } catch (err) {
+                console.warn('Artwork transparency processing unavailable:', err);
+            }
         }
-      } catch (err) {
-        showToast('Tap to enable sound', 'ℹ️');
-      }
-    }
 
-    function copyEventDetails() {
-      const inviteDetails = 
-`॥ श्री विश्वकर्मणे नमः ॥
-VISHWAKARMA PUJA
-KARIMGANJ COLLEGE
-Department of BCA & BCS
+        let audioCtx = null;
+        let isPlayingAudio = false;
+        let audioTimer = null;
 
-─── ⚙️ ───
-You are cordially invited to join us for the celebrations.
-─── ⚙️ ───
+        function initAudioContext() {
+            if (!audioCtx) {
+                const AudioContextClass = window.AudioContext || window.webkitAudioContext;
+                audioCtx = new AudioContextClass();
+            }
+            if (audioCtx.state === 'suspended') {
+                audioCtx.resume();
+            }
+        }
 
-📅 Thursday, 17 September
-⏰ 10:00 AM
-📍 BCA Department`;
+        function playTempleChime(freq = 432, duration = 3.6) {
+            if (!audioCtx) return;
+            const now = audioCtx.currentTime;
 
-      try {
-        const dummyArea = document.createElement('textarea');
-        dummyArea.value = inviteDetails;
-        document.body.appendChild(dummyArea);
-        dummyArea.select();
-        document.execCommand('copy');
-        document.body.removeChild(dummyArea);
-        
-        document.getElementById('copyBtnText').textContent = 'Copied!';
-        showToast('Invitation copied to clipboard!', '📋');
-        setTimeout(() => {
-          document.getElementById('copyBtnText').textContent = 'Copy';
-        }, 2200);
-      } catch (e) {
-        showToast('Unable to copy automatically.', '⚠️');
-      }
-    }
+            const osc = audioCtx.createOscillator();
+            const gain = audioCtx.createGain();
 
-    function shareInvitation() {
-      if (navigator.share) {
-        navigator.share({
-          title: 'Vishwakarma Puja Invitation | Karimganj College',
-          text: 'You are cordially invited to celebrate Vishwakarma Puja with the Department of BCA & BCS, Karimganj College.',
-          url: window.location.href
-        }).catch(() => {});
-      } else {
-        copyEventDetails();
-        showToast('Link copied — share it anywhere', '↗');
-      }
-    }
+            osc.type = 'sine';
+            osc.frequency.setValueAtTime(freq, now);
+            osc.frequency.exponentialRampToValueAtTime(freq * 1.003, now + duration);
 
-    function saveCalendarEvent() {
-      const ics = [
-        'BEGIN:VCALENDAR',
-        'VERSION:2.0',
-        'PRODID:-//Karimganj College//Vishwakarma Puja//EN',
-        'BEGIN:VEVENT',
-        'UID:vishwakarma-puja-2026-karimganj-college',
-        'DTSTAMP:20260915T000000Z',
-        'DTSTART:20260917T043000Z',
-        'DTEND:20260917T063000Z',
-        'SUMMARY:Vishwakarma Puja - Karimganj College',
-        'LOCATION:BCA Department, Karimganj College',
-        'DESCRIPTION:Vishwakarma Puja celebration by the Department of BCA & BCS.',
-        'END:VEVENT',
-        'END:VCALENDAR'
-      ].join('\\r\\n');
+            gain.gain.setValueAtTime(0, now);
+            gain.gain.linearRampToValueAtTime(0.28, now + 0.04);
+            gain.gain.exponentialRampToValueAtTime(0.0001, now + duration);
 
-      const blob = new Blob([ics], { type: 'text/calendar;charset=utf-8' });
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = 'Vishwakarma-Puja-Karimganj-College-2026.ics';
-      document.body.appendChild(a);
-      a.click();
-      a.remove();
-      URL.revokeObjectURL(url);
-      showToast('Calendar event saved', '📅');
-    }
+            osc.connect(gain);
+            gain.connect(audioCtx.destination);
 
-    function updateCountdown() {
-      const target = new Date('2026-09-17T10:00:00+05:30').getTime();
-      const now = Date.now();
-      const diff = target - now;
-      const value = document.getElementById('countdownValue');
-      const label = document.getElementById('countdownLabel');
+            osc.start(now);
+            osc.stop(now + duration);
+        }
 
-      if (diff <= 0) {
-        label.textContent = 'The celebration is now';
-        value.textContent = '🪔 PUJA IS LIVE';
-        return;
-      }
+        function toggleDivineSound() {
+            try {
+                initAudioContext();
+                const btn = document.getElementById('audioToggleBtn');
+                const text = document.getElementById('audioText');
 
-      const total = Math.floor(diff / 1000);
-      const days = Math.floor(total / 86400);
-      const hours = Math.floor((total % 86400) / 3600);
-      const mins = Math.floor((total % 3600) / 60);
-      const secs = total % 60;
+                if (!isPlayingAudio) {
+                    isPlayingAudio = true;
+                    text.textContent = 'Playing';
+                    btn.classList.add('bg-amber-800', 'border-amber-300');
+                    showToast('🎵 Divine chimes playing', '🔔');
 
-      value.textContent =
-        String(days).padStart(2,'0') + ' : ' +
-        String(hours).padStart(2,'0') + ' : ' +
-        String(mins).padStart(2,'0') + ' : ' +
-        String(secs).padStart(2,'0');
-    }
+                    const chord = [288,
+                        384,
+                        432,
+                        576];
+                    let step = 0;
 
-    function showToast(msg, icon = '✨') {
-      const toast = document.getElementById('toastNotification');
-      document.getElementById('toastMessage').textContent = msg;
-      document.getElementById('toastIcon').textContent = icon;
-      
-      toast.classList.remove('translate-y-24', 'opacity-0');
-      toast.classList.add('translate-y-0', 'opacity-100');
+                    playTempleChime(chord[0], 4);
+                    audioTimer = setInterval(() => {
+                        step = (step + 1) % chord.length;
+                        playTempleChime(chord[step], 3.8);
+                    }, 1800);
 
-      setTimeout(() => {
-        toast.classList.add('translate-y-24', 'opacity-0');
-        toast.classList.remove('translate-y-0', 'opacity-100');
-      }, 2600);
-    }
+                } else {
+                    isPlayingAudio = false;
+                    clearInterval(audioTimer);
+                    text.textContent = 'Play';
+                    btn.classList.remove('bg-amber-800', 'border-amber-300');
+                    showToast('Audio paused', '🔇');
+                }
+            } catch (err) {
+                showToast('Tap to enable sound', 'ℹ️');
+            }
+        }
 
-    // Initialize artwork on page load
-    window.addEventListener('load', function() {
-      loadLordVishwakarmaArtwork();
-      updateCountdown();
-      setInterval(updateCountdown, 1000);
-    });
-  </script>
+        function copyEventDetails() {
+            const inviteDetails =
+            `॥ श्री विश्वकर्मणे नमः ॥
+            VISHWAKARMA PUJA
+            KARIMGANJ COLLEGE
+            Department of BCA & BCS
+
+            ─── ⚙️ ───
+            You are cordially invited to join us for the celebrations.
+            ─── ⚙️ ───
+
+            📅 Thursday, 17 September
+            ⏰ 10:00 AM
+            📍 BCA Department`;
+
+            try {
+                const dummyArea = document.createElement('textarea');
+                dummyArea.value = inviteDetails;
+                document.body.appendChild(dummyArea);
+                dummyArea.select();
+                document.execCommand('copy');
+                document.body.removeChild(dummyArea);
+
+                document.getElementById('copyBtnText').textContent = 'Copied!';
+                showToast('Invitation copied to clipboard!', '📋');
+                setTimeout(() => {
+                    document.getElementById('copyBtnText').textContent = 'Copy';
+                }, 2200);
+            } catch (e) {
+                showToast('Unable to copy automatically.', '⚠️');
+            }
+        }
+
+        function shareInvitation() {
+            if (navigator.share) {
+                navigator.share({
+                    title: 'Vishwakarma Puja Invitation | Karimganj College',
+                    text: 'You are cordially invited to celebrate Vishwakarma Puja with the Department of BCA & BCS, Karimganj College.',
+                    url: window.location.href
+                }).catch(() => {});
+            } else {
+                copyEventDetails();
+                showToast('Link copied — share it anywhere', '↗');
+            }
+        }
+
+        function saveCalendarEvent() {
+            const ics = [
+                'BEGIN:VCALENDAR',
+                'VERSION:2.0',
+                'PRODID:-//Karimganj College//Vishwakarma Puja//EN',
+                'BEGIN:VEVENT',
+                'UID:vishwakarma-puja-2026-karimganj-college',
+                'DTSTAMP:20260915T000000Z',
+                'DTSTART:20260917T043000Z',
+                'DTEND:20260917T063000Z',
+                'SUMMARY:Vishwakarma Puja - Karimganj College',
+                'LOCATION:BCA Department, Karimganj College',
+                'DESCRIPTION:Vishwakarma Puja celebration by the Department of BCA & BCS.',
+                'END:VEVENT',
+                'END:VCALENDAR'
+            ].join('\\r\\n');
+
+            const blob = new Blob([ics], {
+                type: 'text/calendar;charset=utf-8'
+            });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'Vishwakarma-Puja-Karimganj-College-2026.ics';
+            document.body.appendChild(a);
+            a.click();
+            a.remove();
+            URL.revokeObjectURL(url);
+            showToast('Calendar event saved', '📅');
+        }
+
+        function updateCountdown() {
+            const target = new Date('2026-09-17T10:00:00+05:30').getTime();
+            const now = Date.now();
+            const diff = target - now;
+            const value = document.getElementById('countdownValue');
+            const label = document.getElementById('countdownLabel');
+
+            if (diff <= 0) {
+                label.textContent = 'The celebration is now';
+                value.textContent = '🪔 PUJA IS LIVE';
+                return;
+            }
+
+            const total = Math.floor(diff / 1000);
+            const days = Math.floor(total / 86400);
+            const hours = Math.floor((total % 86400) / 3600);
+            const mins = Math.floor((total % 3600) / 60);
+            const secs = total % 60;
+
+            value.textContent =
+            String(days).padStart(2, '0') + ' : ' +
+            String(hours).padStart(2, '0') + ' : ' +
+            String(mins).padStart(2, '0') + ' : ' +
+            String(secs).padStart(2, '0');
+        }
+
+        function showToast(msg, icon = '✨') {
+            const toast = document.getElementById('toastNotification');
+            document.getElementById('toastMessage').textContent = msg;
+            document.getElementById('toastIcon').textContent = icon;
+
+            toast.classList.remove('translate-y-24', 'opacity-0');
+            toast.classList.add('translate-y-0', 'opacity-100');
+
+            setTimeout(() => {
+                toast.classList.add('translate-y-24', 'opacity-0');
+                toast.classList.remove('translate-y-0', 'opacity-100');
+            }, 2600);
+        }
+
+        // Initialize artwork on page load
+        window.addEventListener('load', function() {
+            loadLordVishwakarmaArtwork();
+            updateCountdown();
+            setInterval(updateCountdown, 1000);
+        });
+
+        const UPI_DETAILS = {
+            vpa: '7086658830@ptyes',
+            name: 'Prodip Das',
+            note: 'Vishwakarma Puja Contribution'
+        };
+
+        function handleContribution() {
+            const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent) ||
+            (navigator.maxTouchPoints && navigator.maxTouchPoints > 2 && window.innerWidth < 768);
+
+            const upiDeepLink = `upi://pay?pa=${encodeURIComponent(UPI_DETAILS.vpa)}&pn=${encodeURIComponent(UPI_DETAILS.name)}&tn=${encodeURIComponent(UPI_DETAILS.note)}&cu=INR`;
+
+            if (isMobile) {
+                // Directly opens device payment sheet / apps
+                window.location.href = upiDeepLink;
+            } else {
+                // Desktop: Show QR modal
+                document.getElementById('contribModal').classList.remove('hidden');
+            }
+        }
+
+        function closeContributionModal() {
+            document.getElementById('contribModal').classList.add('hidden');
+        }
+
+        function copyUpiId() {
+            navigator.clipboard.writeText(UPI_DETAILS.vpa).then(() => {
+                showToast('UPI ID copied to clipboard!', '📋');
+            }).catch(() => {
+                showToast('Failed to copy UPI', '⚠️');
+            });
+        }
+
+
+    </script>
 </body>
 </html>
