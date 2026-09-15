@@ -1089,18 +1089,47 @@
             }
         }
 
-        function shareInvitation() {
-            if (navigator.share) {
-                navigator.share({
-                    title: 'Vishwakarma Puja Invitation | Karimganj College',
-                    text: 'You are cordially invited to celebrate Vishwakarma Puja with the Department of BCA & BCS, Karimganj College.',
-                    url: window.location.href
-                }).catch(() => {});
-            } else {
-                copyEventDetails();
-                showToast('Link copied — share it anywhere', '↗');
-            }
+        async function shareInvitation() {
+  const shareData = {
+    title: 'Vishwakarma Puja Invitation | Karimganj College',
+    text: `॥ श्री विश्वकर्मणे नमः ॥
+You are cordially invited to celebrate Vishwakarma Puja with the Department of BCA & BCS, Karimganj College.
+
+📅 Friday, 18 September 2026
+⏰ 10:00 AM
+📍 BCA Department`,
+    url: window.location.href
+  };
+
+  if (navigator.share) {
+    try {
+      // Fetch the image and convert it to a File object
+      const response = await fetch('card.png');
+      const blob = await response.blob();
+      const file = new File([blob], 'vishwakarma-puja-invitation.png', { type: blob.type });
+
+      // Check if the user's browser/OS supports sharing files
+      if (navigator.canShare && navigator.canShare({ files: [file] })) {
+        await navigator.share({
+          ...shareData,
+          files: [file]
+        });
+        return;
+      }
+
+      // Fallback: share text & URL if file sharing is unsupported
+      await navigator.share(shareData);
+    } catch (err) {
+      if (err.name !== 'AbortError') {
+        copyEventDetails();
+      }
+    }
+  } else {
+    copyEventDetails();
+    showToast('Details copied to clipboard!', '📋');
+  }
         }
+        
 
         function saveCalendarEvent() {
             const ics = [
